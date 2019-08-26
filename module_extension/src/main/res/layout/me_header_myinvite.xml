@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_f4"
+        android:orientation="horizontal">
+
+        <com.seven.lib_common.stextview.TypeFaceView
+            android:layout_width="2dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/me_item_interview_type_bg" />
+
+        <com.seven.lib_common.stextview.TypeFaceView
+            android:id="@+id/me_headr_interview_my_leader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="我的上级"
+            android:textColor="#1e1d1d"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        //头像
+
+        <ImageView
+            android:id="@+id/me_headr_myinterview_iv"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
+
+        //名字
+
+        <com.seven.lib_common.stextview.TypeFaceView
+            android:id="@+id/me_headr_interview_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/me_headr_myinterview_iv"
+            android:textColor="#333333"
+            tool:text="159357"
+            android:textSize="@dimen/sp_12" />
+
+        //性别
+
+        <ImageView
+            android:id="@+id/me_headr_interview_sex"
+            android:layout_width="13dp"
+            android:layout_height="14dp"
+            android:layout_marginLeft="7dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/me_headr_interview_name" />
+
+
+        //等级
+
+        <ImageView
+            android:id="@+id/me_headr_interview_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_f4"
+        android:orientation="horizontal">
+
+        <com.seven.lib_common.stextview.TypeFaceView
+            android:layout_width="2dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/me_item_interview_type_bg" />
+
+        <com.seven.lib_common.stextview.TypeFaceView
+            android:id="@+id/me_headr_interview_mazai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="我的下级"
+            android:textColor="#1e1d1d"
+            android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>

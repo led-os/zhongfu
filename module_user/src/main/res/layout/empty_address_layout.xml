@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/empty_address_icon" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:gravity="center_horizontal"
+        android:text="   还没有地址哦~"
+        android:textColor="#abaeb3"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/empty_add_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_8"
+        android:background="@drawable/round_gradual_bg"
+        android:paddingBottom="@dimen/margin_8"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:paddingTop="@dimen/margin_8"
+        android:text="添加地址"
+        android:textColor="#fff"
+        android:textSize="14sp" />
+</LinearLayout>

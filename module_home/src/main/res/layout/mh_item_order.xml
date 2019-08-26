@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/impression"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/order_commodity_h">
+
+        <RelativeLayout
+            android:id="@+id/cover_rl"
+            android:layout_width="@dimen/order_commodity_h"
+            android:layout_height="match_parent"
+            android:padding="@dimen/padding_16">
+
+            <ImageView
+                android:id="@+id/cover_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/cover_rl"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/padding_16">
+
+            <com.seven.lib_common.stextview.TypeFaceView
+                android:id="@+id/commodity_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cube"
+                android:textSize="@dimen/sp_14"
+                app:SFontStyle="medium_s"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <com.seven.lib_common.stextview.TypeFaceView
+                android:id="@+id/specification_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey_light"
+                android:textSize="@dimen/sp_10"
+                app:SFontStyle="regular_s"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:id="@+id/price_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/price_tv"
+                    android:text="@string/rmb"
+                    android:textColor="@color/currency"
+                    android:textSize="@dimen/sp_12" />
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:id="@+id/price_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_4"
+                    android:layout_toRightOf="@+id/price_unit"
+                    android:textColor="@color/currency"
+                    android:textSize="@dimen/sp_14" />
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:id="@+id/number_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/cube"
+                    android:textSize="@dimen/sp_14" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/impression"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar"
+        android:paddingLeft="@dimen/padding_16"
+        android:paddingRight="@dimen/padding_16">
+
+        <com.seven.lib_common.stextview.TypeFaceView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cube"
+            android:textSize="@dimen/sp_14"
+            app:SFontStyle="regular_s"
+            android:text="@string/label_delivery"
+            android:layout_centerVertical="true"/>
+
+
+        <com.seven.lib_common.stextview.TypeFaceView
+            android:id="@+id/delivery_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/sp_14"
+            app:SFontStyle="regular_s"
+            android:layout_alignParentRight="true"
+            android:text="@string/delivery_express"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/impression"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar"
+        android:paddingLeft="@dimen/padding_16"
+        android:paddingRight="@dimen/padding_16">
+
+        <com.seven.lib_common.stextview.TypeFaceView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cube"
+            android:textSize="@dimen/sp_14"
+            app:SFontStyle="regular_s"
+            android:text="@string/label_commodity_price"
+            android:layout_centerVertical="true"/>
+
+        <com.seven.lib_common.stextview.TypeFaceView
+            android:id="@+id/commodity_price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/sp_14"
+            app:SFontStyle="regular_s"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/impression"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar"
+        android:paddingLeft="@dimen/padding_16"
+        android:paddingRight="@dimen/padding_16">
+
+        <com.seven.lib_common.stextview.TypeFaceView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cube"
+            android:textSize="@dimen/sp_14"
+            app:SFontStyle="regular_s"
+            android:text="@string/label_freight"
+            android:layout_centerVertical="true"/>
+
+        <com.seven.lib_common.stextview.TypeFaceView
+            android:id="@+id/freight_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey_light"
+            android:textSize="@dimen/sp_14"
+            app:SFontStyle="regular_s"
+            android:layout_alignParentRight="true"
+            android:text="@string/freight_free"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

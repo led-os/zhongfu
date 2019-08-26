@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_f4"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    //推广中心00title
+
+    <LinearLayout
+        android:id="@+id/me_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp">
+
+            <com.seven.lib_common.stextview.TypeFaceView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="推广中心"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_18"
+                app:SFontStyle="regular_s" />
+
+            <ImageView
+                android:id="@+id/me_title_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/me_title_rigth" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:id="@+id/me_userlevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/me_normaluser" />
+
+            <com.seven.lib_common.stextview.TypeFaceView
+                android:id="@+id/me_profit_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/me_profit_bg"
+                android:paddingLeft="16dp"
+                android:paddingTop="7dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="7dp"
+                android:text="收益明细"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_10"
+                app:SFontStyle="regular_s" />
+        </RelativeLayout>
+
+        <com.seven.lib_common.stextview.TypeFaceView
+            android:id="@+id/me_profit_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-8dp"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:SFontStyle="medium_s" />
+
+        <com.seven.lib_common.stextview.TypeFaceView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="推广获得收益"
+            android:textColor="#99ffffff"
+            android:textSize="@dimen/sp_12" />
+    </LinearLayout>
+
+    //tab
+
+    <LinearLayout
+        android:id="@+id/me_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/me_title"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="-30dp"
+        android:layout_marginRight="23dp"
+        android:background="@drawable/me_titlt_tab"
+        android:orientation="horizontal">
+
+        //购买升级
+
+        <RelativeLayout
+            android:id="@+id/me_buy_up_rl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical">
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="购买升级"
+                    android:textColor="#434343"
+                    android:textSize="15sp" />
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="一键购买轻松升级"
+                    android:textColor="#e1b779"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14dp"
+                android:src="@drawable/me_buy" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="26dp"
+            android:background="#e6e6e6" />
+        //推广升级
+
+        <RelativeLayout
+            android:id="@+id/me_ext_up_rl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical">
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="推广升级"
+                    android:textColor="#434343"
+                    android:textSize="15sp" />
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="各项推广享受升级"
+                    android:textColor="#e1b779"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14dp"
+                android:src="@drawable/me_extension" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    //推广中心content
+
+
+        <LinearLayout
+            android:id="@+id/me_content"
+            android:layout_below="@+id/me_tab"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginRight="23dp"
+            android:layout_marginBottom="60dp"
+            android:orientation="vertical">
+
+            //购买报单
+
+            <RelativeLayout
+                android:id="@+id/me_buy_bd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="购买报单"
+                    android:textColor="#1e1d1d"
+                    android:textSize="@dimen/sp_14" />
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:id="@+id/me_buy_receive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/me_buy_arrow"
+                    android:text="能领取3次令牌奖励"
+                    android:textColor="#a4a4a4"
+                    android:textSize="11sp" />
+
+                <ImageView
+                    android:id="@+id/me_buy_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/me_arrow_right" />
+            </RelativeLayout>
+
+            //我的邀请
+
+            <RelativeLayout
+                android:id="@+id/me_buy_interview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="我的邀请"
+                    android:textColor="#1e1d1d"
+                    android:textSize="@dimen/sp_14" />
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:id="@+id/me_interviewpeo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/me_inyerview_arrow"
+                    android:text="已成功邀请0人"
+                    android:textColor="#a4a4a4"
+                    android:textSize="11sp" />
+
+                <ImageView
+                    android:id="@+id/me_inyerview_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/me_arrow_right" />
+            </RelativeLayout>
+
+            //各项奖励
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical">
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:id="@+id/me_reward_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="奖励领取"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:SFontStyle="bold_s" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/me_rv_everyreward"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/grey_f4" />
+            </LinearLayout>
+            //奖励规则
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp">
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="奖励规则"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/sp_14"
+                    app:SFontStyle="bold_s" />
+
+                <TextView
+                    android:id="@+id/me_rv_slice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/me_slice"
+                    android:text="筛选：普通用户"
+                    android:textColor="@color/primary"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/me_rv_rewardrules"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:nestedScrollingEnabled="false" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

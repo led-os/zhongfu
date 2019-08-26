@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/home_tab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/tab_home_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="btClick"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tab_home" />
+
+            <com.seven.lib_common.stextview.TypeFaceView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_home"
+                android:textColor="@color/tab_primary"
+                android:textSize="@dimen/sp_10"
+                app:SFontStyle="regular_s" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_extension_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="btClick"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tab_extension" />
+
+            <com.seven.lib_common.stextview.TypeFaceView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_extension"
+                android:textColor="@color/tab_primary"
+                android:textSize="@dimen/sp_10"
+                app:SFontStyle="regular_s" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_model_ll"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="btClick"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tab_model" />
+
+            <com.seven.lib_common.stextview.TypeFaceView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tab_model"
+                android:textColor="@color/tab_primary"
+                android:textSize="@dimen/sp_10"
+                app:SFontStyle="regular_s" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/tab_user_rl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="btClick">
+
+            <LinearLayout
+                android:id="@+id/tab_user_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/tab_user" />
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tab_user"
+                    android:textColor="@color/tab_primary"
+                    android:textSize="@dimen/sp_10"
+                    app:SFontStyle="regular_s" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/message_count_rl"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/point_message"
+                android:layout_marginRight="@dimen/margin_24"
+                android:visibility="gone">
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:id="@+id/message_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_10" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

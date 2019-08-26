@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_200">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_24"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:paddingLeft="126dp">
+
+                <ImageView
+                    android:id="@+id/close_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/close_m"
+                    android:layout_alignParentRight="true"/>
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:id="@+id/stock_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/sp_12"
+                    app:SFontStyle="regular_s"
+                    android:layout_alignParentBottom="true"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/stock_tv"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/margin_4">
+
+                    <com.seven.lib_common.stextview.TypeFaceView
+                        android:id="@+id/token_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/currency"
+                        android:textSize="@dimen/sp_12"
+                        app:SFontStyle="regular_s"/>
+
+                    <com.seven.lib_common.stextview.TypeFaceView
+                        android:id="@+id/price_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/currency"
+                        android:textSize="@dimen/sp_10"
+                        app:SFontStyle="regular_s"
+                        android:layout_marginLeft="@dimen/margin_10"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/padding_20">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <com.seven.lib_common.stextview.TypeFaceView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_12"
+                        android:textColor="@color/cube"
+                        app:SFontStyle="regular_s"
+                        android:text="@string/label_volume"
+                        android:layout_marginLeft="@dimen/margin_16"
+                        android:layout_marginTop="@dimen/margin_10"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_100"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/padding_16"
+                        android:layout_marginTop="@dimen/margin_10">
+
+                        <ImageView
+                            android:id="@+id/subtraction_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/subtraction" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:background="@drawable/number_bg">
+
+                            <com.seven.lib_common.stextview.TypeFaceView
+                                android:id="@+id/number_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/grey_dark"
+                                android:textSize="@dimen/sp_14"
+                                app:SFontStyle="regular_s"/>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/add_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/add" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/cover_iv"
+            android:layout_width="94dp"
+            android:layout_height="94dp"
+            android:layout_marginLeft="@dimen/margin_16"
+            android:background="@color/impression"
+            android:scaleType="centerCrop"
+            android:elevation="3dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_shade"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_bar_bg"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/shopping_add_rl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="btClick">
+
+            <com.seven.lib_common.stextview.TypeFaceView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/button_cart"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/sp_14"
+                app:SFontStyle="regular_s" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/buy_rl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_rect"
+            android:onClick="btClick">
+
+            <com.seven.lib_common.stextview.TypeFaceView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/button_buy"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                app:SFontStyle="regular_s" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

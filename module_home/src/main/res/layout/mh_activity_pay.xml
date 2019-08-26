@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/impression"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pay_item"
+            android:paddingLeft="@dimen/padding_16"
+            android:paddingRight="@dimen/padding_16">
+
+            <com.seven.lib_common.stextview.TypeFaceView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/label_pay_method"
+                android:textColor="@color/cube"
+                android:textSize="@dimen/sp_14"
+                app:SFontStyle="medium_s" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/impression" />
+
+        <RelativeLayout
+            android:id="@+id/alipay_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pay_item"
+            android:onClick="btClick"
+            android:paddingLeft="@dimen/padding_16"
+            android:paddingRight="@dimen/padding_16">
+
+            <ImageView
+                android:id="@+id/alipay_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/alipay" />
+
+            <com.seven.lib_common.stextview.TypeFaceView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_12"
+                android:layout_toRightOf="@+id/alipay_iv"
+                android:text="@string/label_alipay"
+                android:textColor="@color/cube"
+                android:textSize="@dimen/sp_14"
+                app:SFontStyle="medium_s" />
+
+            <ImageView
+                android:id="@+id/alipay_check_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/check_selector" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/impression" />
+
+        <RelativeLayout
+            android:id="@+id/wechat_pay_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pay_item"
+            android:onClick="btClick"
+            android:paddingLeft="@dimen/padding_16"
+            android:paddingRight="@dimen/padding_16">
+
+            <ImageView
+                android:id="@+id/wechat_pay_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/wechat_pay" />
+
+            <com.seven.lib_common.stextview.TypeFaceView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_12"
+                android:layout_toRightOf="@+id/wechat_pay_iv"
+                android:text="@string/label_wechat_pay"
+                android:textColor="@color/cube"
+                android:textSize="@dimen/sp_14"
+                app:SFontStyle="medium_s" />
+
+            <ImageView
+                android:id="@+id/wechat_check_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/check_selector" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/impression" />
+
+        <RelativeLayout
+            android:id="@+id/app_pay_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pay_item"
+            android:onClick="btClick"
+            android:paddingLeft="@dimen/padding_16"
+            android:paddingRight="@dimen/padding_16">
+
+            <ImageView
+                android:id="@+id/app_pay_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/app_pay" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_12"
+                android:layout_toRightOf="@+id/app_pay_iv"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <com.seven.lib_common.stextview.TypeFaceView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_app_pay"
+                        android:textColor="@color/cube"
+                        android:textSize="@dimen/sp_14"
+                        app:SFontStyle="medium_s" />
+
+                    <com.seven.lib_common.stextview.TypeFaceView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_4"
+                        android:text="@string/label_app_pay_hint"
+                        android:textColor="@color/grey_light"
+                        android:textSize="@dimen/sp_10"
+                        app:SFontStyle="regular_s"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:id="@+id/app_pay_count_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary_light"
+                    android:textSize="@dimen/sp_12"
+                    app:SFontStyle="regular_s" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/app_check_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/check_selector" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/pay_btn"
+        style="@style/Button_Long"
+        android:onClick="btClick"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_40"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16">
+
+        <com.seven.lib_common.stextview.TypeFaceView
+            android:id="@+id/pay_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

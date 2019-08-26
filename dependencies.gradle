@@ -1,0 +1,45 @@
+allprojects {
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+        mavenCentral()
+        jcenter()
+        maven { url "https://dl.bintray.com/thelasterstar/maven/" }
+        maven { url "https://jitpack.io" }
+        google()
+    }
+}
+
+ext {
+    android = [
+            compileSdkVersion: 28,
+            buildToolsVersion: "28.0.2",
+            minSdkVersion    : 21,
+            targetSdkVersion : 28,
+            versionCode      : 14,
+            versionName      : "1.1.5"]
+
+    dependencies = [
+            googleSupportVersion: "28.+"
+    ]
+
+    multidex = [
+            version: "1.0.1"
+    ]
+
+    arouter = [
+            version:"1.2.4",
+            compiler:"1.1.4"
+    ]
+
+    glide = [
+            version:"4.9.0",
+            compiler:"4.9.0"
+    ]
+
+    butterknife = [
+            version:"8.4.0",
+            compiler:"8.4.0"
+    ]
+
+}

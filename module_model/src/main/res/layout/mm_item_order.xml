@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/order_item"
+        android:paddingLeft="@dimen/padding_16"
+        android:paddingRight="@dimen/padding_16">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_20"
+            android:background="@drawable/round_white_bg"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_16">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="76dp">
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:id="@+id/name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/grey_medium"
+                    android:textSize="@dimen/sp_14"
+                    app:SFontStyle="regular_s" />
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:id="@+id/radio_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/grey_light"
+                    android:textSize="@dimen/sp_10"
+                    app:SFontStyle="regular_s" />
+
+                <ImageView
+                    android:id="@+id/line_iv"
+                    android:layout_width="1px"
+                    android:layout_height="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_6"
+                    android:layout_marginRight="@dimen/margin_6"
+                    android:layout_toLeftOf="@+id/radio_tv"
+                    android:background="@color/line_between" />
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:id="@+id/volume_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/line_iv"
+                    android:textColor="@color/grey_light"
+                    android:textSize="@dimen/sp_10"
+                    app:SFontStyle="regular_s" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10">
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:id="@+id/token_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/sp_24"
+                    app:SFontStyle="medium_s" />
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_6"
+                    android:layout_marginTop="6dp"
+                    android:layout_toRightOf="@+id/token_tv"
+                    android:text="@string/token"
+                    android:textColor="@color/grey_light"
+                    android:textSize="@dimen/sp_14"
+                    app:SFontStyle="regular_s" />
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_6"
+                    android:layout_toLeftOf="@+id/price_tv"
+                    android:text="@string/rmb"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/sp_14"
+                    app:SFontStyle="regular_s" />
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:id="@+id/price_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/sp_24"
+                    app:SFontStyle="medium_s" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/business_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/line_between" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_12">
+
+                    <com.seven.lib_common.stextview.TypeFaceView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/pay_method"
+                        android:textColor="@color/grey_light"
+                        android:textSize="@dimen/sp_12" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/wechat_pay_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_12"
+                            android:src="@drawable/wechat_pay" />
+
+                        <ImageView
+                            android:id="@+id/alipay_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_12"
+                            android:src="@drawable/alipay" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_16">
+
+            <ImageView
+                android:id="@+id/avatar_iv"
+                android:layout_width="@dimen/avatar"
+                android:layout_height="@dimen/avatar"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/role_iv"
+                android:layout_width="@dimen/avatar"
+                android:adjustViewBounds="true"
+                android:layout_height="wrap_content"
+                android:src="@drawable/lv_0"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/status_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/margin_12"
+            android:background="@drawable/cir_currency_bg"
+            android:paddingLeft="@dimen/padding_6"
+            android:paddingRight="@dimen/padding_6">
+
+            <com.seven.lib_common.stextview.TypeFaceView
+                android:id="@+id/status_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_10"
+                app:SFontStyle="regular_s" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

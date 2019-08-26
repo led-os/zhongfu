@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/top_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/search_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/search_edit"
+            android:layout_margin="@dimen/margin_16"
+            android:background="@drawable/background_search"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/padding_12"
+            android:visibility="invisible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_12"
+                android:src="@drawable/search_grey" />
+
+            <com.seven.lib_common.stextview.TypeFaceView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_8"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/hint_search"
+                android:textColor="@color/grey_light"
+                android:textSize="@dimen/sp_14"
+                app:SFontStyle="light_s" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/banner_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:layout_marginLeft="@dimen/margin_16"
+            android:layout_marginRight="@dimen/margin_16"
+            android:elevation="10dp">
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner_view"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                app:indicator_drawable_selected="@drawable/radius_grey"
+                app:indicator_drawable_unselected="@drawable/radius_white"
+                app:indicator_height="4dp"
+                app:indicator_margin="4dp"
+                app:indicator_width="4dp" />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_4"
+            android:layout_marginRight="@dimen/margin_4"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:layout_marginLeft="@dimen/margin_16"
+            android:layout_marginRight="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_12"
+            android:background="@color/line_between" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_12"
+            android:layout_marginTop="@dimen/margin_12"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/label_recommend" />
+
+            <com.seven.lib_common.stextview.TypeFaceView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_recommend"
+                android:textColor="@color/label"
+                android:textSize="@dimen/sp_16" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

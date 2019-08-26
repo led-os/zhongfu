@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/me_dialog_notvip"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/me_notvip_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="33dp"
+                android:background="@drawable/me_xx" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginRight="10dp"
+                android:textSize="15sp"
+                android:gravity="center"
+                android:text="@string/me_not_vip" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_marginTop="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_f4" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/me_not_vip_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingLeft="40dp"
+                android:paddingTop="18dp"
+                android:paddingRight="40dp"
+                android:paddingBottom="18dp"
+                android:textSize="14sp"
+                android:text="返回页面"
+                android:textColor="#abaeb3" />
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/grey_f4" />
+
+            <TextView
+                android:id="@+id/me_not_vip_ok"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingLeft="40dp"
+                android:paddingTop="18dp"
+                android:paddingRight="40dp"
+                android:paddingBottom="18dp"
+                android:textSize="14sp"
+                android:text="立刻购买"
+                android:textColor="#177feb" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

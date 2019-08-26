@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/c2c_bg" />
+
+    <RelativeLayout
+        android:id="@+id/title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar">
+
+        <com.seven.lib_common.stextview.TypeFaceView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_model"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"
+            app:SFontStyle="medium_s" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_100">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginLeft="@dimen/margin_16"
+            android:layout_marginRight="@dimen/margin_16"
+            android:background="@drawable/background_white"
+            android:elevation="3dp">
+
+            <com.seven.lib_common.widget.rollingview.TextViewSwitcher
+                android:id="@+id/switcher_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                app:autoStart="true"
+                app:flipDuration="500"
+                app:flipInterval="2000"
+                app:inAnimation="@anim/rolling_text_in"
+                app:outAnimation="@anim/rolling_text_out" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_12"
+            android:background="@color/impression"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_1_h"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/padding_24">
+
+                <LinearLayout
+                    android:id="@+id/demand_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/c2c_1"
+                        android:layout_marginTop="@dimen/margin_8"/>
+
+                    <com.seven.lib_common.stextview.TypeFaceView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:text="@string/label_demand"
+                        android:textColor="@color/grey_medium"
+                        android:textSize="@dimen/sp_12"
+                        app:SFontStyle="regular_s" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/message_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/c2c_2"
+                        android:layout_marginTop="@dimen/margin_8"/>
+
+                    <com.seven.lib_common.stextview.TypeFaceView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:text="@string/label_message"
+                        android:textColor="@color/grey_medium"
+                        android:textSize="@dimen/sp_12"
+                        app:SFontStyle="regular_s" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/voucher_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/c2c_3"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/margin_8"/>
+
+                        <RelativeLayout
+                            android:id="@+id/total_rl"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/margin_70"
+                            android:background="@drawable/point_message"
+                            android:visibility="gone">
+
+                            <com.seven.lib_common.stextview.TypeFaceView
+                                android:id="@+id/total_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/sp_10" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <com.seven.lib_common.stextview.TypeFaceView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:text="@string/label_voucher"
+                        android:textColor="@color/grey_medium"
+                        android:textSize="@dimen/sp_12"
+                        app:SFontStyle="regular_s" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_2_h"
+                android:layout_marginLeft="@dimen/margin_16"
+                android:layout_marginRight="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_12"
+                android:background="@drawable/round_white_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/buy_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <com.seven.lib_common.stextview.TypeFaceView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/tab_buy"
+                        android:textColor="@color/c2c_tab"
+                        android:textSize="@dimen/sp_14"
+                        app:SFontStyle="bold_s" />
+
+                    <ImageView
+                        android:id="@+id/buy_iv"
+                        android:layout_width="35dp"
+                        android:layout_height="2dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/primary" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="1px"
+                    android:layout_height="20dp"
+                    android:background="@color/line_between" />
+
+                <RelativeLayout
+                    android:id="@+id/sell_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <com.seven.lib_common.stextview.TypeFaceView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/tab_sell"
+                        android:textColor="@color/c2c_tab"
+                        android:textSize="@dimen/sp_14"
+                        app:SFontStyle="bold_s" />
+
+                    <ImageView
+                        android:id="@+id/sell_iv"
+                        android:layout_width="35dp"
+                        android:layout_height="2dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/primary" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/sort_time_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_16"
+                    android:paddingRight="@dimen/padding_8"
+                    android:paddingTop="@dimen/padding_12">
+
+                    <com.seven.lib_common.stextview.TypeFaceView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sort_time"
+                        android:textColor="@color/c2c_sort"
+                        android:textSize="@dimen/sp_12"
+                        app:SFontStyle="regular_s" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/sort_price_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_8"
+                    android:paddingRight="@dimen/padding_16"
+                    android:paddingTop="@dimen/padding_12">
+
+                    <com.seven.lib_common.stextview.TypeFaceView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sort_price"
+                        android:textColor="@color/c2c_sort"
+                        android:textSize="@dimen/sp_12"
+                        app:SFontStyle="regular_s" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

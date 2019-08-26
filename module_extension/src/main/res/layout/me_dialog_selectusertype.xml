@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingRight="14dp"
+        android:paddingLeft="14dp">
+
+        <TextView
+            android:id="@+id/me_choice_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_12"
+            android:text="@string/dialog_sure"
+            android:textColor="@color/primary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/me_choice_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_12"
+            android:text="@string/dialog_cancel"
+            android:textColor="@color/grey_light"
+            android:textSize="@dimen/sp_16" />
+    </RelativeLayout>
+
+    <com.seven.lib_common.widget.PickerView
+        android:id="@+id/me_select_pv"
+        android:layout_width="match_parent"
+        android:background="@color/grey_f4"
+        android:layout_height="160dp" />
+</LinearLayout>

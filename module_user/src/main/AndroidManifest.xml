@@ -1,0 +1,27 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.seven.module_user" >
+
+    <application>
+        <activity android:name=".ui.fragment.EditUserInfoActivity" />
+        <activity android:name=".ui.fragment.setting.UserSettingActivity" />
+        <activity android:name=".ui.fragment.CollectionActivity" />
+        <activity android:name=".ui.fragment.UserAddressActivity" />
+        <activity android:name=".ui.fragment.UserCreateAddressActivity" />
+        <activity android:name=".ui.fragment.order.UserOrderListActivity" />
+        <activity android:name=".ui.fragment.order.UserOrderDetailActivity" />
+        <activity android:name=".ui.fragment.order.LogisticsActivity" />
+        <activity android:name=".ui.fragment.token.UserTokenActivity" />
+        <activity android:name=".ui.fragment.token.UserReceiveTokenActivity" />
+        <activity android:name=".ui.fragment.token.UserTokenListActivity" />
+        <activity android:name=".ui.fragment.UserShoppingCartActivity" />
+        <activity android:name=".ui.activity.login.LoginActivity" />
+        <activity android:name=".ui.activity.login.MobileActivity" />
+        <activity android:name=".ui.activity.login.PasswordActivity" />
+        <activity android:name=".ui.activity.login.RegisterActivity" />
+        <activity android:name=".ui.fragment.setting.UserSetPayAccountActivity" />
+        <activity android:name=".ui.fragment.setting.UserModifyPassWordActivity" />
+        <activity android:name=".ui.fragment.setting.UserSetPayPassWordActivity" />
+        <activity android:name=".ui.fragment.token.TokenDescActivity" />
+
+    </application>
+</manifest>

@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/toolbar_shade">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_bg_icon"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/padding_16"
+            android:paddingRight="@dimen/padding_16">
+
+
+            <RelativeLayout
+                android:id="@+id/user_info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="60dp">
+
+                <ImageView
+                    android:id="@+id/user_photo"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_16"
+                    android:src="@drawable/default_photo_icon" />
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/user_photo"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingBottom="@dimen/margin_6"
+                    android:paddingLeft="@dimen/padding_16"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/vip_lv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/user_photo"
+                    android:layout_below="@+id/user_name"
+                    android:layout_toRightOf="@+id/user_photo" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/more_white" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-40dp"
+            android:background="#f2f2f2"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="我的订单"
+                    android:textColor="#1e1d1d"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/all_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/more"
+                    android:gravity="center"
+                    android:text="查看全部订单"
+                    android:textColor="#abaeb3"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="#fff"
+                android:orientation="horizontal"
+                android:paddingTop="16dp">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+
+                    <TextView
+                        android:id="@+id/shop_cart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="6dp"
+                        android:drawableTop="@drawable/shop_cart_icon"
+                        android:padding="10dp"
+                        android:text="购物车"
+                        android:textColor="#5f6166"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/shop_cart_unread"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignRight="@+id/shop_cart"
+                        android:background="@drawable/test"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:visibility="gone"
+                        tools:text="2" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/wait_pay_unread"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignRight="@+id/wait_pay"
+                        android:background="@drawable/test"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:visibility="gone"
+                        tools:text="2" />
+
+                    <TextView
+                        android:id="@+id/wait_pay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="6dp"
+                        android:drawableTop="@drawable/account_wait_pay_icon"
+                        android:padding="10dp"
+                        android:text="待付款"
+                        android:textColor="#5f6166"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/wait_send_unread"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignRight="@+id/wait_send"
+                        android:background="@drawable/test"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:visibility="gone"
+                        tools:text="2" />
+
+                    <TextView
+                        android:id="@+id/wait_send"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="6dp"
+                        android:drawableTop="@drawable/account_wait_send_icom"
+                        android:padding="10dp"
+                        android:text="待发货"
+                        android:textColor="#5f6166"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/shop_received_unread"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignRight="@+id/shop_received"
+                        android:background="@drawable/test"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:visibility="gone"
+                        tools:text="2" />
+
+                    <TextView
+                        android:id="@+id/shop_received"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="6dp"
+                        android:drawableTop="@drawable/account_shop_received_icon"
+                        android:padding="10dp"
+                        android:text="待收货"
+                        android:textColor="#5f6166"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <TextView
+
+                android:id="@+id/my_token"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/selector_white_btn"
+                android:drawableLeft="@drawable/my_lingpai_icon"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/more"
+                android:gravity="center_vertical"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:text="我的令牌"
+                android:textColor="@color/account_text_color" />
+
+            <TextView
+                android:id="@+id/my_shoucang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/selector_white_btn"
+                android:drawableLeft="@drawable/my_shoucang_icon"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/more"
+                android:gravity="center_vertical"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:text="我的收藏"
+                android:textColor="@color/account_text_color" />
+
+            <TextView
+                android:id="@+id/my_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/selector_white_btn"
+                android:drawableLeft="@drawable/my_address_icon"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/more"
+                android:gravity="center_vertical"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:text="地址管理"
+                android:textColor="@color/account_text_color" />
+
+            <TextView
+                android:id="@+id/my_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/selector_white_btn"
+                android:drawableLeft="@drawable/my_setting"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/more"
+                android:gravity="center_vertical"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:text="设置"
+                android:textColor="@color/account_text_color" />
+
+            <LinearLayout
+                android:id="@+id/message_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/selector_white_btn">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/message" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="我的消息"
+                        android:textColor="@color/account_text_color"
+                        android:layout_marginLeft="@dimen/margin_8"
+                        android:layout_marginRight="@dimen/margin_8"/>
+
+                    <ImageView
+                        android:id="@+id/read_iv"
+                        android:layout_width="5dp"
+                        android:layout_height="5dp"
+                        android:background="@drawable/point_message"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/more"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/my_clear_cache"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/selector_white_btn"
+                android:drawableLeft="@drawable/my_clear_cache_icon"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/more"
+                android:gravity="center_vertical"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:text="清除缓存"
+                android:textColor="@color/account_text_color" />
+
+            <TextView
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/selector_white_btn"
+                android:drawableLeft="@drawable/my_logout_icon"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/more"
+                android:gravity="center_vertical"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:text="退出账号"
+                android:textColor="@color/account_text_color" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/impression">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar">
+
+            <RelativeLayout
+                android:id="@+id/left_btn"
+                android:layout_width="@dimen/toolbar"
+                android:layout_height="match_parent"
+                android:onClick="btClick">
+
+                <ImageView
+                    android:id="@+id/left_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/back_white_m" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/search_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/search_edit"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/toolbar"
+                android:layout_marginRight="@dimen/margin_16"
+                android:background="@drawable/background_search"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/padding_12">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_12"
+                    android:src="@drawable/search_grey" />
+
+                <com.seven.lib_common.stextview.TypeFaceEdit
+                    android:id="@+id/search_et"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:cursorVisible="false"
+                    android:gravity="center_vertical"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:hint="@string/hint_search"
+                    android:maxLines="1"
+                    android:textColor="@color/grey_dark"
+                    android:textColorHint="@color/grey_light"
+                    android:textSize="@dimen/sp_14"
+                    app:SFontStyle="light_s" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/right_text_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:onClick="btClick"
+                android:paddingBottom="@dimen/padding_6"
+                android:paddingLeft="@dimen/padding_16"
+                android:paddingRight="@dimen/padding_16"
+                android:paddingTop="@dimen/padding_6">
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:id="@+id/right_text_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_12"
+                    app:SFontStyle="regular_s" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/control_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_second"
+            android:layout_below="@+id/title_layout"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/global_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:onClick="btClick">
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_global"
+                    android:textColor="@color/label_screen"
+                    android:textSize="@dimen/sp_14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_4"
+                    android:src="@drawable/label_global_selector" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line_between" />
+
+            <LinearLayout
+                android:id="@+id/sales_volume_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/padding_24"
+                android:onClick="btClick">
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_sales_volume"
+                    android:textColor="@color/label_screen"
+                    android:textSize="@dimen/sp_14" />
+
+                <ImageView
+                    android:id="@+id/sales_volume_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_4"
+                    android:src="@drawable/label_screen_1"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line_between" />
+
+            <LinearLayout
+                android:id="@+id/price_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="btClick"
+                android:orientation="horizontal">
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_price"
+                    android:textColor="@color/label_screen"
+                    android:textSize="@dimen/sp_14" />
+
+                <ImageView
+                    android:id="@+id/price_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_4"
+                    android:src="@drawable/label_screen_1"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/control_layout">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <RelativeLayout
+            android:id="@+id/history_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title_layout"
+            android:background="@color/impression"
+            android:onClick="btClick"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.seven.lib_common.stextview.TypeFaceView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_history"
+                        android:textSize="@dimen/sp_14"
+                        android:textColor="@color/grey_medium"
+                        android:layout_centerVertical="true"
+                        app:SFontStyle="medium_s"
+                        android:layout_marginLeft="@dimen/margin_16"/>
+
+                    <ImageView
+                        android:id="@+id/delete_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/delete"/>
+
+                </RelativeLayout>
+
+                <com.seven.lib_common.widget.flowlayout.TagFlowLayout
+                    android:id="@+id/tag_flow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginRight="11dp"
+                    android:layout_marginBottom="@dimen/margin_32"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

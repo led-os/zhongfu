@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_f4"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/me_buy_bd_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/order_address_h"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_16">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/location" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_16"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:id="@+id/me_buy_bd_address1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_address"
+                    android:textColor="@color/cube"
+                    android:textSize="@dimen/sp_14"
+                    app:SFontStyle="medium_s"
+                    android:layout_marginRight="@dimen/margin_10"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:id="@+id/me_buy_bd_address2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/hint_address"
+                    android:textColor="@color/grey_light"
+                    android:textSize="@dimen/sp_12"
+                    app:SFontStyle="regular_s" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_right" />
+
+    </LinearLayout>
+    //购买报单界面布局
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/me_buy_bd_rv"
+        android:layout_width="match_parent"
+        android:background="@color/grey_f4"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fafafa"
+        android:orientation="horizontal">
+
+        <com.seven.lib_common.stextview.TypeFaceView
+            android:id="@+id/me_buy_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="总价: ￥0.00"
+            android:textColor="#136de8"
+            android:textSize="14sp"
+            app:SFontStyle="regular_s" />
+
+        <com.seven.lib_common.stextview.TypeFaceView
+            android:id="@+id/me_buy_bd_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/me_buy_bd_gobuybg"
+            android:gravity="center"
+            android:paddingLeft="33dp"
+            android:paddingRight="33dp"
+            android:text="去购买"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:SFontStyle="bold_s" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    android:divider="@drawable/shape_line_h"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:showDividers="middle|beginning">
+
+    <TextView
+        android:id="@+id/camera"
+        style="@style/BottomDialogMenuStyle"
+        android:text="拍照" />
+
+    <TextView
+        android:id="@+id/photo"
+        style="@style/BottomDialogMenuStyle"
+        android:text="从相册选择" />
+
+    <TextView
+        android:id="@+id/cancel"
+        style="@style/BottomDialogMenuStyle"
+        android:text="取消" />
+</LinearLayout>

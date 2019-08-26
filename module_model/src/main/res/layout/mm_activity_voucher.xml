@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/impression"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/sell_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="btClick">
+
+            <com.seven.lib_common.stextview.TypeFaceView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/tab_sell_mine"
+                android:textColor="@color/demand_tab"
+                android:textSize="@dimen/sp_14"
+                app:SFontStyle="regular_s" />
+
+            <ImageView
+                android:id="@+id/sell_iv"
+                android:layout_width="35dp"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/primary" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/buy_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="btClick">
+
+            <com.seven.lib_common.stextview.TypeFaceView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/tab_buy_mine"
+                android:textColor="@color/demand_tab"
+                android:textSize="@dimen/sp_14"
+                app:SFontStyle="regular_s" />
+
+            <ImageView
+                android:id="@+id/buy_iv"
+                android:layout_width="35dp"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/primary" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_second"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/all_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="btClick">
+
+            <com.seven.lib_common.stextview.TypeFaceView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/status_all"
+                android:textColor="@color/demand_tab"
+                android:textSize="@dimen/sp_14"
+                app:SFontStyle="regular_s" />
+
+            <ImageView
+                android:id="@+id/all_iv"
+                android:layout_width="35dp"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/primary" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/business_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="btClick">
+
+            <com.seven.lib_common.stextview.TypeFaceView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/status_wait_business"
+                android:textColor="@color/demand_tab"
+                android:textSize="@dimen/sp_14"
+                app:SFontStyle="regular_s" />
+
+            <ImageView
+                android:id="@+id/business_iv"
+                android:layout_width="35dp"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/primary" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/upload_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="btClick">
+
+            <com.seven.lib_common.stextview.TypeFaceView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/status_wait_upload"
+                android:textColor="@color/demand_tab"
+                android:textSize="@dimen/sp_14"
+                app:SFontStyle="regular_s" />
+
+            <ImageView
+                android:id="@+id/upload_iv"
+                android:layout_width="35dp"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/primary" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sure_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="btClick">
+
+            <com.seven.lib_common.stextview.TypeFaceView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/status_wait_sure"
+                android:textColor="@color/demand_tab"
+                android:textSize="@dimen/sp_14"
+                app:SFontStyle="regular_s" />
+
+            <ImageView
+                android:id="@+id/sure_iv"
+                android:layout_width="35dp"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/primary" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/end_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="btClick">
+
+            <com.seven.lib_common.stextview.TypeFaceView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/status_end"
+                android:textColor="@color/demand_tab"
+                android:textSize="@dimen/sp_14"
+                app:SFontStyle="regular_s" />
+
+            <ImageView
+                android:id="@+id/end_iv"
+                android:layout_width="35dp"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/primary" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

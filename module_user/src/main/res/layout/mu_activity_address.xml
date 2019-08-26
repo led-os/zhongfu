@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+
+    <com.seven.module_user.ui.fragment.view.BaseRecyclerView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#f2f2f2" />
+
+    <TextView
+        android:id="@+id/add_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_16"
+        android:background="@drawable/round_gradual_bg"
+        android:gravity="center"
+        android:padding="@dimen/padding_8"
+        android:text="添加地址"
+        android:textColor="#fff"
+        android:textSize="14sp"
+        android:visibility="gone" />
+</LinearLayout>

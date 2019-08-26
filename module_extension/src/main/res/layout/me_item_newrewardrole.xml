@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grey_f4"
+    android:layout_marginTop="1dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/me_reward_rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/me_reward_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="34dp"
+            android:textColor="#1e1d1d"
+            android:textSize="14sp"
+            tool:text="直推奖励" />
+
+        <TextView
+            android:id="@+id/me_reward_tv1_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/me_reward_tv1"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:textColor="#1885ed"
+            android:textSize="16sp"
+            tool:text="+90" />
+
+        <TextView
+            android:id="@+id/me_reward_tv1_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/me_reward_tv1_1"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="15dp"
+            android:textColor="#1885ed"
+            android:textSize="10sp"
+            tool:text="个" />
+    </RelativeLayout>
+
+
+</LinearLayout>

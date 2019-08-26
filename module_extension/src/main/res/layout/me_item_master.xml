@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    //矿主名额item
+
+    <com.seven.lib_common.stextview.TypeFaceView
+        android:id="@+id/me_item_master_index"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="01"
+        android:textColor="#1578ea"
+        android:textSize="@dimen/sp_18"
+        app:SFontStyle="regular_s" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+        <com.seven.lib_common.stextview.TypeFaceView
+            android:id="@+id/me_item_master_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="账户：暂未设置，点击设置"
+            android:textColor="#808080"
+            android:textSize="12sp"
+            app:SFontStyle="regular_s" />
+
+        <com.seven.lib_common.stextview.TypeFaceView
+            android:id="@+id/me_item_master_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="密码：2982002039"
+            android:visibility="gone"
+            android:textColor="#808080"
+            android:textSize="12sp"
+            app:SFontStyle="regular_s" />
+    </LinearLayout>
+</LinearLayout>

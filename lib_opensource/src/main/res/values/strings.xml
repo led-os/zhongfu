@@ -1,0 +1,54 @@
+<resources>
+    <string name="error_network">网络未连接</string>
+    <string name="hint_downloading">缓存中</string>
+    <string name="load_end">没有更多数据</string>
+    <string name="load_failed">加载失败，请点我重试</string>
+    <string name="loading">正在加载中...</string>
+
+    <string name="hint_error_http">网络错误</string>
+    <string name="hint_error_analysis">解析错误</string>
+    <string name="hint_error_connect">连接失败</string>
+    <string name="hint_error_time_out">网络超时</string>
+    <string name="hint_error_un_known">未知错误</string>
+    <string name="save_gallery_succeed">保存成功</string>
+    <string name="save_gallery_failure">保存失败</string>
+
+    <!-- date -->
+    <string name="weekday">周日</string>
+    <string name="monday">周一</string>
+    <string name="tuesday">周二</string>
+    <string name="wednesday">周三</string>
+    <string name="thursday">周四</string>
+    <string name="friday">周五</string>
+    <string name="saturday">周六</string>
+
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="hour">时</string>
+    <string name="minute">分</string>
+
+    <!-- sex -->
+    <string name="sex_man">男</string>
+    <string name="sex_woman">女</string>
+    <string name="sex_other">保密</string>
+
+    <!-- common -->
+    <string name="save">保存</string>
+    <string name="sure">确定</string>
+    <string name="cancel">取消</string>
+    <string name="submit">提交</string>
+    <string name="compile">编辑</string>
+    <string name="send">发送</string>
+    <string name="selected">选择</string>
+
+    <string name="insert">添加</string>
+    <string name="update">更新</string>
+    <string name="delete">删除</string>
+    <string name="select">查询</string>
+
+    <string name="camera">拍照</string>
+    <string name="camera_reset">重新拍照</string>
+    <string name="photo">相册</string>
+
+</resources>

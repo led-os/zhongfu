@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/impression"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/address_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/order_address_h"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/padding_16"
+            android:onClick="btClick">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/location" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_16"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.seven.lib_common.stextview.TypeFaceView
+                        android:id="@+id/name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_address"
+                        android:textColor="@color/cube"
+                        android:textSize="@dimen/sp_14"
+                        app:SFontStyle="medium_s"
+                        android:layout_marginRight="@dimen/margin_10"/>
+
+                    <com.seven.lib_common.stextview.TypeFaceView
+                        android:id="@+id/mobile_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/cube"
+                        android:textSize="@dimen/sp_14"
+                        app:SFontStyle="medium_s"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/address_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:background="@drawable/border_primary_rect"
+                        android:paddingLeft="@dimen/padding_4"
+                        android:paddingRight="@dimen/padding_4"
+                        android:visibility="gone">
+
+                        <com.seven.lib_common.stextview.TypeFaceView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tag_normal"
+                            android:textColor="@color/primary"
+                            android:textSize="@dimen/sp_10"
+                            app:SFontStyle="regular_s" />
+
+                    </RelativeLayout>
+
+                    <com.seven.lib_common.stextview.TypeFaceView
+                        android:id="@+id/address_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/hint_address"
+                        android:textColor="@color/grey_light"
+                        android:textSize="@dimen/sp_12"
+                        app:SFontStyle="regular_s" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_right" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_shade"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_bar_bg">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:paddingRight="@dimen/padding_16"
+            android:paddingLeft="@dimen/padding_16"
+            android:gravity="center_vertical">
+
+            <com.seven.lib_common.stextview.TypeFaceView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/sp_14"
+                android:text="@string/amount"
+                app:SFontStyle="regular_s" />
+
+            <com.seven.lib_common.stextview.TypeFaceView
+                android:id="@+id/amount_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/sp_14"
+                app:SFontStyle="medium_s" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/payment_rl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/button_rect"
+            android:onClick="btClick">
+
+            <com.seven.lib_common.stextview.TypeFaceView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/button_payment"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                app:SFontStyle="regular_s" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

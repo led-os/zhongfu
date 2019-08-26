@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:background="@color/grey_f4"
+    android:layout_marginBottom="1dp"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+    <TextView
+        android:id="@+id/me_item_get_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#1e1d1d"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="18dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="15dp"
+        tool:text="可在平台获得报单产品40套"/>
+
+        <TextView
+            android:id="@+id/me_item_get_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/me_get_btn_bg"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="7dp"
+            android:paddingTop="7dp"
+            android:layout_marginEnd="15dp"
+            android:textSize="13sp"
+            android:textColor="#1472e9"
+            android:text="点击领取"/>
+    </RelativeLayout>
+
+</LinearLayout>

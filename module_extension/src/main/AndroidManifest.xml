@@ -1,0 +1,15 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.seven.module_extension" >
+    <application>
+        <activity android:name=".ui.activity.IncomeActivity"/>
+        <activity android:name=".ui.activity.BuyRoleActivity"/>
+        <activity android:name=".ui.activity.BuyActivity"/>
+        <activity android:name=".ui.activity.MyInterviewActivity" />
+        <activity android:name=".ui.activity.LevelRuleActivity" />
+        <activity android:name=".ui.activity.ReceivAwardsActivity" />
+        <activity android:name=".ui.activity.ReceiveBDActivity" />
+        <activity android:name=".ui.activity.QuotaActivity" />
+        <activity android:name=".ui.activity.BindActivity" />
+        <activity android:name=".ui.activity.UpActivity" />
+    </application>
+</manifest>

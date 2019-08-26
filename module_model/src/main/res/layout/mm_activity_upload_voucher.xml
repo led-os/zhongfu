@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/impression"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/transaction_item_2"
+            android:paddingLeft="@dimen/padding_16">
+
+            <com.seven.lib_common.stextview.TypeFaceView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/hint_voucher"
+                android:textColor="@color/cube"
+                android:textSize="@dimen/sp_14"
+                app:SFontStyle="regular_s" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/impression" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_16">
+
+            <ImageView
+                android:id="@+id/voucher_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="btClick"
+                android:scaleType="centerCrop"
+                android:src="@drawable/upload" />
+
+        </RelativeLayout>
+
+</LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/upload_btn"
+        style="@style/Button_Long"
+        android:layout_marginLeft="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_40"
+        android:onClick="btClick">
+
+        <com.seven.lib_common.stextview.TypeFaceView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/button_upload"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14" />
+
+    </RelativeLayout>
+
+</LinearLayout>

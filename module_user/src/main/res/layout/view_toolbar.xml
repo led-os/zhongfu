@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:fitsSystemWindows="true"
+    app:statusBarScrim="@android:color/transparent">
+
+    <com.seven.module_user.ui.fragment.view.CustomToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toolbar_bg_icon"
+        android:fitsSystemWindows="true"
+        android:textColor="#fff"
+        app:titleTextColor="#fff"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        app:navigationIcon="@drawable/back_white"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ToolbarTheme">
+
+        <ImageView
+            android:id="@+id/toolbar_right_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|end"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:visibility="visible" />
+
+    </com.seven.module_user.ui.fragment.view.CustomToolbar>
+
+</android.support.design.widget.AppBarLayout>

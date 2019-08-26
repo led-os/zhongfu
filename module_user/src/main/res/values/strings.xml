@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">module_user</string>
+    <string name="user_shop_cart">购物车</string>
+    <string name="user_collect">我的收藏</string>
+    <string name="user_address">地址管理</string>
+    <string name="user_add_address">添加地址</string>
+    <string name="user_order_detail">订单详情</string>
+    <string name="user_edit_info">编辑资料</string>
+    <string name="user_token">我的令牌</string>
+    <string name="user_receive_token">领取令牌</string>
+    <string name="user_set_pay_account">收款账号</string>
+    <string name="user_set_modify_password">重置密码</string>
+    <string name="user_set_pay_password">设置支付密码</string>
+    <string name="user_setting">设置</string>
+</resources>

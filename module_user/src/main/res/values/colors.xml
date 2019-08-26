@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="account_text_color">#0d0e10</color>
+    <color name="color_fff">#ffffff</color>
+    <color name="add_address_default_n">#7a7c80</color>
+    <color name="add_address_default_c">#147aea</color>
+    <color name="color_eee">#eeeeee</color>
+    <color name="color_1e1d1d">#1e1d1d</color>
+    <color name="color_6c">#6c6c6c</color>
+    <color name="color_abaeb3">#abaeb3</color>
+
+</resources>

@@ -9,6 +9,7 @@ import android.webkit.WebView;
 import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.seven.lib_common.base.activity.BaseTitleActivity;
+import com.seven.lib_router.Constants;
 import com.seven.lib_router.router.RouterPath;
 import com.seven.module_user.R;
 import com.seven.module_user.R2;
@@ -25,7 +26,6 @@ public class LogisticsActivity extends BaseTitleActivity {
     int orderId = 0;
     @BindView(R2.id.mu_web)
     WebView muWeb;
-    String url = "http://mobile.zf.fqwlkj.com.cn/express.html?order_id=";
 
     @Override
     protected int getLayoutId() {
@@ -52,7 +52,7 @@ public class LogisticsActivity extends BaseTitleActivity {
     protected void initBundleData(Intent intent) {
         if (intent == null) intent = getIntent();
         orderId = intent.getIntExtra("orderId", -1);
-        muWeb.loadUrl(url + orderId);
+        muWeb.loadUrl("http://www.qingyan.vrplay2018.com/express.html" + "?" + orderId);
         WebSettings settings = muWeb.getSettings();
         settings.setDomStorageEnabled(true);
         settings.setJavaScriptEnabled(true);
@@ -76,6 +76,6 @@ public class LogisticsActivity extends BaseTitleActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-       
+
     }
 }

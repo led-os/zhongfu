@@ -76,7 +76,7 @@ public class MessageActivity extends BaseTitleActivity implements BaseQuickAdapt
 
     private void request(int page) {
 
-        presenter.messageList(Constants.RequestConfig.MESSAGE_LIST);
+        presenter.messageList(Constants.RequestConfig.MESSAGE_LIST,page);
 
     }
 

@@ -9,7 +9,6 @@ import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
-import com.gyf.barlibrary.ImmersionBar;
 import com.seven.lib_common.base.activity.BaseAppCompatActivity;
 import com.seven.lib_common.base.activity.BaseTitleActivity;
 import com.seven.lib_model.ApiManager;

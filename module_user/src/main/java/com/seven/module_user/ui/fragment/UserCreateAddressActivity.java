@@ -3,10 +3,8 @@ package com.seven.module_user.ui.fragment;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
@@ -18,14 +16,6 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.bigkoo.pickerview.builder.OptionsPickerBuilder;
 import com.bigkoo.pickerview.listener.OnOptionsSelectListener;
 import com.bigkoo.pickerview.view.OptionsPickerView;
-import com.gyf.barlibrary.ImmersionBar;
-import com.lljjcoder.Interface.OnCityItemClickListener;
-import com.lljjcoder.bean.CityBean;
-import com.lljjcoder.bean.DistrictBean;
-import com.lljjcoder.bean.ProvinceBean;
-import com.lljjcoder.citywheel.CityConfig;
-import com.lljjcoder.style.citypickerview.CityPickerView;
-import com.seven.lib_common.base.activity.BaseAppCompatActivity;
 import com.seven.lib_common.base.activity.BaseTitleActivity;
 import com.seven.lib_common.utils.ToastUtils;
 import com.seven.lib_model.ApiManager;
@@ -35,8 +25,6 @@ import com.seven.lib_model.model.user.mine.AddAddressEntity;
 import com.seven.lib_model.model.user.mine.AddressEntity;
 import com.seven.lib_model.model.user.mine.DTEntity;
 import com.seven.lib_model.model.user.mine.RegionEntity;
-import com.seven.lib_model.user.UserActivityPresenterNew;
-import com.seven.lib_router.Variable;
 import com.seven.lib_router.router.RouterPath;
 import com.seven.module_user.R;
 import com.seven.module_user.R2;
@@ -47,7 +35,6 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.OnClick;
 import io.reactivex.Observer;
-import io.reactivex.Scheduler;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
@@ -159,7 +146,7 @@ public class UserCreateAddressActivity extends BaseTitleActivity {
                 phoneEdit.setText(addressEntity.getContact_phone());
                 addressTx.setText(addressEntity.getProvince_name() + " " + addressEntity.getCity_name() + " " + addressEntity.getDistrict_name());
                 addressDetail.setText(addressEntity.getAddress());
-                isDefaultAddressImg.setImageDrawable(!TextUtils.isEmpty(String.valueOf(addressEntity.getIs_default())) && addressEntity.getIs_default() == 0 ? getDrawable(R.drawable.item_shopping_cart_default) : getDrawable(R.drawable.item_shopping_cart_selector));
+                isDefaultAddressImg.setImageDrawable(!TextUtils.isEmpty(String.valueOf(addressEntity.getIs_default())) && addressEntity.getIs_default() == 0 ? getDrawable(R.drawable.check_off) : getDrawable(R.drawable.check_on));
                 isDefaultAddressTx.setTextColor(!TextUtils.isEmpty(String.valueOf(addressEntity.getIs_default())) && addressEntity.getIs_default() == 0 ? getResources().getColor(R.color.add_address_default_n) : getResources().getColor(R.color.add_address_default_c));
                 isDefault = addressEntity.getIs_default() == 1;
             }
@@ -227,7 +214,7 @@ public class UserCreateAddressActivity extends BaseTitleActivity {
 
     @OnClick(R2.id.is_default_address)
     void setDefaultAddress() {
-        isDefaultAddressImg.setImageDrawable(isDefault ? getDrawable(R.drawable.item_shopping_cart_default) : getDrawable(R.drawable.item_shopping_cart_selector));
+        isDefaultAddressImg.setImageDrawable(isDefault ? getDrawable(R.drawable.check_off) : getDrawable(R.drawable.check_on));
         isDefaultAddressTx.setTextColor(isDefault ? getResources().getColor(R.color.add_address_default_n) : getResources().getColor(R.color.add_address_default_c));
         isDefault = !isDefault;
     }

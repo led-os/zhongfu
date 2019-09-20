@@ -33,19 +33,19 @@ public class MyInviteAdapter extends BaseQuickAdapter<ItemsBean, BaseViewHolder>
         ImageView level = helper.getView(R.id.me_item_interview_level);
         switch (item.getRole()) {
             case 0:
-                level.setBackground(mContext.getResources().getDrawable(R.drawable.me_normaluser));
+                level.setBackground(mContext.getResources().getDrawable(R.drawable.lv_0));
                 break;
             case 1:
-                level.setBackground(mContext.getResources().getDrawable(R.drawable.me_vip));
+                level.setBackground(mContext.getResources().getDrawable(R.drawable.lv_1));
                 break;
             case 2:
-                level.setBackground(mContext.getResources().getDrawable(R.drawable.me_kuangzhu));
+                level.setBackground(mContext.getResources().getDrawable(R.drawable.lv_2));
                 break;
             case 3:
-                level.setBackground(mContext.getResources().getDrawable(R.drawable.me_changzhu));
+                level.setBackground(mContext.getResources().getDrawable(R.drawable.lv_3));
                 break;
             case 4:
-                level.setBackground(mContext.getResources().getDrawable(R.drawable.ctylord));
+                level.setBackground(mContext.getResources().getDrawable(R.drawable.lv_4));
                 break;
             default:
         }

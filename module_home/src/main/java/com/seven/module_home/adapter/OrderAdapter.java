@@ -36,7 +36,7 @@ public class OrderAdapter extends BaseQuickAdapter<OrderListEntity.ItemsBean,Bas
                 .setText(R.id.specification_tv,item.getGoods_sku_name())
                 .setText(R.id.price_tv, FormatUtils.formatCurrencyD(item.getPrice()))
                 .setText(R.id.number_tv,String.valueOf(item.getNumber()))
-                .setText(R.id.commodity_price_tv,FormatUtils.formatCurrencyD(item.getPrice() * item.getNumber()));
+                .setText(R.id.commodity_price_tv,FormatUtils.formatCurrencyD(item.getPrice()));
 
     }
 }

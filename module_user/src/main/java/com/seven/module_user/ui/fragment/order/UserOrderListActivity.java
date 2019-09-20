@@ -15,7 +15,6 @@ import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.flyco.tablayout.SlidingTabLayout;
-import com.gyf.barlibrary.ImmersionBar;
 import com.seven.lib_common.base.activity.BaseAppCompatActivity;
 import com.seven.lib_router.router.RouterPath;
 import com.seven.module_user.R;
@@ -63,7 +62,6 @@ public class UserOrderListActivity extends BaseAppCompatActivity {
 
     @Override
     protected int getContentViewId() {
-        statusBar = StatusBar.LIGHT;
         return R.layout.mu_activity_order_list;
     }
 

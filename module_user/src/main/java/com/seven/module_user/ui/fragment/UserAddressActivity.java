@@ -110,10 +110,10 @@ public class UserAddressActivity extends BaseTitleActivity {
                             .addOnClickListener(R.id.delete_address);
                     TextView isDefault = helper.getView(R.id.is_default_address);
                     if (!TextUtils.isEmpty(String.valueOf(item.getIs_default())) && item.getIs_default()==0) {
-                        isDefault.setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(R.drawable.item_shopping_cart_default), null, null, null);
+                        isDefault.setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(R.drawable.check_off), null, null, null);
                         isDefault.setTextColor(getResources().getColor(R.color.color_abaeb3));
                     } else {
-                        isDefault.setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(R.drawable.item_shopping_cart_selector), null, null, null);
+                        isDefault.setCompoundDrawablesWithIntrinsicBounds(getResources().getDrawable(R.drawable.check_on), null, null, null);
                         isDefault.setTextColor(getResources().getColor(R.color.add_address_default_c));
                     }
                 }

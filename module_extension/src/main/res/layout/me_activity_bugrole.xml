@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tool="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grey_f4"
@@ -20,7 +18,7 @@
             android:paddingLeft="15dp"
             android:paddingTop="19dp"
             android:paddingBottom="19dp"
-            android:text="选择购买角色"
+            android:text="@string/hint_role"
             android:textColor="#1e1d1d"
             android:textSize="14sp" />
 
@@ -42,7 +40,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="矿主"
+                    android:text="@string/grade_lv_2"
                     android:textColor="#1e1d1d"
                     android:textSize="14sp" />
 
@@ -51,7 +49,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="￥198.00"
                     android:textColor="#fe786c"
                     android:textSize="12sp" />
 
@@ -83,7 +80,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="场主"
+                    android:text="@string/grade_lv_3"
                     android:textColor="#1e1d1d"
                     android:textSize="14sp" />
 
@@ -92,7 +89,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="￥198.00"
                     android:textColor="#fe786c"
                     android:textSize="12sp" />
 
@@ -124,7 +120,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="城主"
+                    android:text="@string/grade_lv_4"
                     android:textColor="#1e1d1d"
                     android:textSize="14sp" />
 
@@ -133,7 +129,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="￥198.00"
                     android:textColor="#fe786c"
                     android:textSize="12sp" />
 
@@ -156,7 +151,7 @@
             android:paddingLeft="15dp"
             android:paddingTop="19dp"
             android:paddingBottom="19dp"
-            android:text="选择支付方式"
+            android:text="@string/hint_payment"
             android:textColor="#1e1d1d"
             android:textSize="12sp" />
 
@@ -177,7 +172,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="支付宝"
+                    android:text="@string/label_alipay"
                     android:textColor="#1e1d1d"
                     android:textSize="14sp" />
 
@@ -208,7 +203,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="微信"
+                    android:text="@string/label_wechat_pay"
                     android:textColor="#1e1d1d"
                     android:textSize="14sp" />
 

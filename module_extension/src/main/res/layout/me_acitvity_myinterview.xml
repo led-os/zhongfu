@@ -4,16 +4,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
     //我的邀请界面布局
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/me_rv_myinterview"
         android:layout_width="match_parent"
-        android:background="@color/grey_f4"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        />
+        android:layout_weight="1"/>
 
     <TextView
         android:id="@+id/me_empty"

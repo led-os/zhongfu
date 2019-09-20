@@ -1,13 +1,3 @@
 <resources>
-    <string name="app_name">module_extension</string>
-    <string name="me_upgrade">引荐更多用户\n提升更高等级</string>
-    <string name="me_income">令牌明细</string>
-    <string name="me_buyrole_title">购买角色</string>
-    <string name="me_buy_bd_title">购买报单</string>
-    <string name="me_my_interview_title">我的团队</string>
-    <string name="me_not_vip">您还不是会员\n购买报单产品可升级为会员\n享受更多福利～</string>
-    <string name="me_level_title">平级烧伤规则</string>
-    <string name="me_receivelingpai_title">领取令牌</string>
-    <string name="me_receive_good">领取商品</string>
-    <string name="me_share">分享</string>
+
 </resources>

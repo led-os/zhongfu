@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.seven.lib_common.base.sheet.IBaseSheet;
 import com.seven.lib_common.listener.OnClickListener;
+import com.seven.lib_common.utils.ResourceUtils;
 import com.seven.lib_common.widget.PickerView;
 import com.seven.module_extension.R;
 
@@ -60,11 +61,11 @@ public class SelectUserTypeDialog extends IBaseSheet implements PickerView.onSel
         cancel.setOnClickListener(this);
         confirm.setOnClickListener(this);
         userType = new ArrayList<>();
-        userType.add(0, "普通用户");
-        userType.add(1, "VIP");
-        userType.add(2, "矿主");
-        userType.add(3, "场主");
-        userType.add(4, "城主");
+        userType.add(0, ResourceUtils.getText(R.string.grade_lv_0));
+        userType.add(1, ResourceUtils.getText(R.string.grade_lv_1));
+        userType.add(2, ResourceUtils.getText(R.string.grade_lv_2));
+        userType.add(3, ResourceUtils.getText(R.string.grade_lv_3));
+        userType.add(4, ResourceUtils.getText(R.string.grade_lv_4));
         pickerView.setData(userType);
         pickerView.setSelected(0);
     }

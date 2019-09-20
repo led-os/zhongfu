@@ -33,9 +33,9 @@ public class BuyBdAdapter extends BaseQuickAdapter<BdGoodsEntity, BaseViewHolder
         try {
             helper.setText(R.id.me_item_buybd_price, !TextUtils.isEmpty(String.valueOf(item.getPrice())) ? "￥"+String.valueOf((int)item.getPrice()) : "");
             if (item.isSelected()) {
-                helper.setBackgroundRes(R.id.me_item_buybd_ck, R.drawable.me_select);
+                helper.setBackgroundRes(R.id.me_item_buybd_ck, R.drawable.check_on);
             } else {
-                helper.setBackgroundRes(R.id.me_item_buybd_ck, R.drawable.me_unselect);
+                helper.setBackgroundRes(R.id.me_item_buybd_ck, R.drawable.check_off);
             }
         }catch (Exception e){
             ToastUtils.showToast(mContext,"a");

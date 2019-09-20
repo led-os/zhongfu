@@ -142,7 +142,7 @@
             android:id="@+id/is_default_address_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/item_shopping_cart_default" />
+            android:src="@drawable/check_off" />
 
         <TextView
             android:id="@+id/is_default_address_tx"

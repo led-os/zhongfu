@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
@@ -32,7 +33,9 @@ import com.seven.module_home.R;
 import com.seven.module_home.R2;
 import com.seven.module_home.adapter.BannerEntranceAdapter;
 import com.seven.module_home.adapter.BannerEntranceListAdapter;
+import com.seven.module_home.adapter.FormCommodityAdapter;
 import com.seven.module_home.adapter.HomeAdapter;
+import com.seven.module_home.widget.decoration.FormCommodityDecoration;
 import com.seven.module_home.widget.decoration.HomeDecoration;
 import com.youth.banner.Banner;
 import com.youth.banner.listener.OnBannerListener;
@@ -62,7 +65,7 @@ public class HomeFragment extends BaseFragment implements BaseQuickAdapter.OnIte
     public SwipeRefreshLayout swipeRefreshLayout;
     @BindView(R2.id.recycler_view)
     public RecyclerView recyclerView;
-    public HomeAdapter adapter;
+    private HomeAdapter adapter;
     private List<CommodityEntity> commodityList;
 
     //banner
@@ -76,6 +79,12 @@ public class HomeFragment extends BaseFragment implements BaseQuickAdapter.OnIte
     private RecyclerView bannerRecycler;
     private BannerEntranceListAdapter entranceAdapter;
     private List<List<BannerEntranceEntity>> entranceList;
+
+    private ImageView activityIv;
+
+    private RecyclerView formRecycler;
+    private List<CommodityEntity> formCommodityList;
+    private FormCommodityAdapter formAdapter;
 
     private FgHomePresenter presenter;
 
@@ -93,6 +102,7 @@ public class HomeFragment extends BaseFragment implements BaseQuickAdapter.OnIte
         titleRl.setOnClickListener(this);
 
         setRecyclerView();
+        setFormRecycler();
 
         presenter = new FgHomePresenter(this, this);
         showLoadingDialog();
@@ -102,8 +112,9 @@ public class HomeFragment extends BaseFragment implements BaseQuickAdapter.OnIte
     private void request(int page) {
         if (page == 1) {
             presenter.banner(Constants.RequestConfig.BANNER);
-            presenter.entrance(Constants.RequestConfig.ENTRANCE);
+//            presenter.entrance(Constants.RequestConfig.ENTRANCE);
         }
+        presenter.incomeCommodityList(1);
         presenter.commodityRecommendList(Constants.RequestConfig.COMMODITY_RECOMMEND_LIST, page, pageSize);
     }
 
@@ -178,6 +189,11 @@ public class HomeFragment extends BaseFragment implements BaseQuickAdapter.OnIte
         bannerRecycler.setLayoutManager(layoutManager);
         bannerRecycler.setAdapter(entranceAdapter);
 
+        activityIv = getView(bannerView, activityIv, R.id.activity_iv);
+        activityIv.setOnClickListener(this);
+
+        formRecycler = getView(bannerView, formRecycler, R.id.recycler_form);
+
         return bannerView;
     }
 
@@ -210,6 +226,16 @@ public class HomeFragment extends BaseFragment implements BaseQuickAdapter.OnIte
                     }
                 })
                 .start();
+
+    }
+
+    private void setFormRecycler() {
+
+        formAdapter = new FormCommodityAdapter(R.layout.mh_item_home, formCommodityList, screenWidth);
+        formAdapter.setOnItemClickListener(this);
+        formRecycler.setLayoutManager(new GridLayoutManager(SSDK.getInstance().getContext(), 2));
+        formRecycler.addItemDecoration(new FormCommodityDecoration());
+        formRecycler.setAdapter(formAdapter);
 
     }
 
@@ -277,6 +303,23 @@ public class HomeFragment extends BaseFragment implements BaseQuickAdapter.OnIte
                 }
 
                 break;
+
+            case 1:
+
+                if (object == null || ((List<CommodityEntity>) object).size() == 0) {
+                    formAdapter.loadMoreEnd();
+                } else {
+                    formCommodityList = (List<CommodityEntity>) object;
+
+                    if (isRefresh)
+                        formAdapter.setNewData(formCommodityList);
+                    else
+                        formAdapter.addData(formCommodityList);
+
+                    formAdapter.loadMoreComplete();
+                }
+
+                break;
         }
     }
 
@@ -288,6 +331,11 @@ public class HomeFragment extends BaseFragment implements BaseQuickAdapter.OnIte
                     .withInt(Constants.BundleConfig.FLOW, Constants.BundleConfig.FLOW_SEARCH)
                     .navigation();
 
+//        if (v.getId() == R.id.activity_iv) {
+//            if (!isLogin()) return;
+//            ARouter.getInstance().build(RouterPath.ACTIVITY_ACTIVE)
+//                    .navigation();
+//        }
     }
 
     @Override
@@ -315,9 +363,13 @@ public class HomeFragment extends BaseFragment implements BaseQuickAdapter.OnIte
 
         if (adapter instanceof BannerEntranceAdapter)
             intentCommodity(Constants.BundleConfig.FLOW_ENTRANCE, ((BannerEntranceAdapter) adapter).getItem(position).getId());
-        else
+        else if (adapter instanceof HomeAdapter)
             ARouter.getInstance().build(RouterPath.ACTIVITY_COMMODITY_DETAILS)
                     .withInt(Constants.BundleConfig.ID, this.adapter.getItem(position).getId())
+                    .navigation();
+        else if (adapter instanceof FormCommodityAdapter)
+            ARouter.getInstance().build(RouterPath.ACTIVITY_COMMODITY_DETAILS)
+                    .withInt(Constants.BundleConfig.ID, this.formAdapter.getItem(position).getId())
                     .navigation();
     }
 

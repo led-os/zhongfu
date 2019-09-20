@@ -20,6 +20,7 @@ import com.google.gson.Gson;
 import com.seven.lib_common.base.fragment.BaseFragment;
 import com.seven.lib_common.listener.OnClickListener;
 import com.seven.lib_common.stextview.TypeFaceView;
+import com.seven.lib_common.utils.ResourceUtils;
 import com.seven.lib_common.utils.ScreenUtils;
 import com.seven.lib_common.utils.ToastUtils;
 import com.seven.lib_model.ApiManager;
@@ -148,6 +149,11 @@ public class ExtensionFragment extends BaseFragment {
         meBuyBd.setOnClickListener(this);
         meBuyInterview.setOnClickListener(this);
         meTitleRight.setOnClickListener(this);
+
+        me_rv_slice.setText(ResourceUtils.getFormatText(R.string.grade_screen,ResourceUtils.getText(R.string.grade_lv_0)));
+        meInterviewpeo.setText(ResourceUtils.getFormatText(R.string.hint_invite,0));
+        meBuyReceive.setText(ResourceUtils.getFormatText(R.string.hint_declaration,0));
+
     }
 
     private void setUserData() {
@@ -155,30 +161,30 @@ public class ExtensionFragment extends BaseFragment {
         if (userInfo != null && !userInfo.equals("null")) {
             user = new Gson().fromJson(userInfo, UserEntity.class);
             if (user == null) {
-                meUserlevel.setBackgroundResource(R.drawable.me_normaluser);
-                meInterviewpeo.setText("已成功邀请" + "0人");
+                meUserlevel.setBackgroundResource(R.drawable.lv_0);
+                meInterviewpeo.setText(ResourceUtils.getFormatText(R.string.hint_invite,0));
                 meProfitNum.setText("0");
                 return;
             } else {
-                meInterviewpeo.setText("已成功邀请" + user.getInvite_number() + "人");
-                meBuyReceive.setText("能领取" + user.getForm_goods_number() + "次令牌奖励");
+                meInterviewpeo.setText(ResourceUtils.getFormatText(R.string.hint_invite,user.getInvite_number()));
+                meBuyReceive.setText(ResourceUtils.getFormatText(R.string.hint_declaration,user.getForm_goods_number()));
                 meProfitNum.setText(!TextUtils.isEmpty(user.getPromotion_token_number()) ? user.getPromotion_token_number() : "0");
                 switch (user.getRole()) {
                     case 0:
-                        meUserlevel.setBackgroundResource(R.drawable.me_normaluser);
+                        meUserlevel.setBackgroundResource(R.drawable.lv_0);
                         showNotVipDialog();
                         break;
                     case 1:
-                        meUserlevel.setBackgroundResource(R.drawable.me_vip);
+                        meUserlevel.setBackgroundResource(R.drawable.lv_1);
                         break;
                     case 2:
-                        meUserlevel.setBackgroundResource(R.drawable.me_kuangzhu);
+                        meUserlevel.setBackgroundResource(R.drawable.lv_2);
                         break;
                     case 3:
-                        meUserlevel.setBackgroundResource(R.drawable.me_changzhu);
+                        meUserlevel.setBackgroundResource(R.drawable.lv_3);
                         break;
                     case 4:
-                        meUserlevel.setBackgroundResource(R.drawable.ctylord);
+                        meUserlevel.setBackgroundResource(R.drawable.lv_4);
                         break;
                     default:
                 }
@@ -297,7 +303,7 @@ public class ExtensionFragment extends BaseFragment {
                 RouterUtils.getInstance().routerNormal(RouterPath.ACTIVITY_TOKEN);
         } else if (v.getId() == R.id.me_buy_up_rl) {
             if (user != null && user.getRole() == 4) {
-                ToastUtils.showToast(getActivity(), "你已经是最高等级");
+                ToastUtils.showToast(getActivity(), ResourceUtils.getText(R.string.hint_grade_max));
             } else {
                 if (user == null)
                     RouterUtils.getInstance().routerNormal(RouterPath.ACTIVITY_LOGIN);
@@ -315,13 +321,12 @@ public class ExtensionFragment extends BaseFragment {
             if (user == null)
                 RouterUtils.getInstance().routerNormal(RouterPath.ACTIVITY_LOGIN);
             else
-                RouterUtils.getInstance().routerWithString(RouterPath.ACTIVITY_MY_INTERVIEW,"id",String.valueOf(user.getId()));
-
+                RouterUtils.getInstance().routerNormal(RouterPath.ACTIVITY_MY_INTERVIEW);
         } else if (v.getId() == R.id.me_ext_up_rl) {
             if (user == null)
                 RouterUtils.getInstance().routerNormal(RouterPath.ACTIVITY_LOGIN);
             else
-                RouterUtils.getInstance().routerWithString(RouterPath.ACTIVITY_MY_INTERVIEW,"id",String.valueOf(user.getId()));
+                RouterUtils.getInstance().routerNormal(RouterPath.ACTIVITY_MY_INTERVIEW);
         } else if (v.getId() == R.id.me_title_right) {
             RouterUtils.getInstance().routerNormal(RouterPath.ACTIVITY_LEVEL);
         }
@@ -338,16 +343,16 @@ public class ExtensionFragment extends BaseFragment {
             @Override
             public void onClick(View v, Object... objects) {
                 String userType = (String) objects[0];
-                me_rv_slice.setText("筛选：" + userType);
-                if (userType.equals("普通用户")) {
+                me_rv_slice.setText(ResourceUtils.getFormatText(R.string.grade_screen,userType));
+                if (userType.equals(ResourceUtils.getText(R.string.grade_lv_0))) {
                     type = 0;
-                } else if (userType.equals("VIP")) {
+                } else if (userType.equals(ResourceUtils.getText(R.string.grade_lv_1))) {
                     type = 1;
-                } else if (userType.equals("矿主")) {
+                } else if (userType.equals(ResourceUtils.getText(R.string.grade_lv_2))) {
                     type = 2;
-                } else if (userType.equals("场主")) {
+                } else if (userType.equals(ResourceUtils.getText(R.string.grade_lv_3))) {
                     type = 3;
-                } else if (userType.equals("城主")) {
+                } else if (userType.equals(ResourceUtils.getText(R.string.grade_lv_4))) {
                     type = 4;
                 }
                 getData(type);

@@ -1,4 +1,6 @@
 <resources>
+    <string name="app_name">中福在线</string>
+
     <string name="error_network">网络未连接</string>
     <string name="hint_downloading">缓存中</string>
     <string name="load_end">没有更多数据</string>
@@ -50,5 +52,286 @@
     <string name="camera">拍照</string>
     <string name="camera_reset">重新拍照</string>
     <string name="photo">相册</string>
+
+    <!--permission-->
+    <string name="permission">应用需要本地存储权限</string>
+
+    <!-- network -->
+    <string name="hint_network_title">网络状态</string>
+    <string name="hint_network_content">请检查你的网络</string>
+
+    <!--dialog-->
+    <string name="dialog_sure">确定</string>
+    <string name="dialog_cancel">取消</string>
+    <string name="dialog_hint">提示</string>
+
+    <!--日期 -->
+    <string name="week_sunday">星期日</string>
+    <string name="week_monday">星期一</string>
+    <string name="week_tuesday">星期二</string>
+    <string name="week_wednesday">星期三</string>
+    <string name="week_thursday">星期四</string>
+    <string name="week_friday">星期五</string>
+    <string name="week_saturday">星期六</string>
+
+    <!--sheet-->
+    <string name="sheet_cancel">取消</string>
+    <string name="sheet_delete">删除</string>
+    <string name="sheet_reply">回复</string>
+    <string name="sheet_report">举报</string>
+    <string name="sheet_video_source">查看作品</string>
+    <string name="sheet_language_china">中文</string>
+    <string name="sheet_language_english">English</string>
+    <string name="sheet_photo">相册</string>
+    <string name="sheet_camera">拍照</string>
+    <string name="sheet_feed_source">查看动态</string>
+    <string name="save_gallery">保存至手机相册</string>
+
+    <string name="hint_sheet">请选择</string>
+    <string name="hint_sheet_stock">请选择规格</string>
+    <string name="hint_stock_null">库存不足</string>
+
+    <string name="hint_pay_success">支付成功</string>
+    <string name="hint_pay_failure">支付失败</string>
+    <string name="hint_pay_cancel">支付已取消</string>
+
+    <string name="update_version_format" formatted="false">新版本%s</string>
+    <string name="update_later">暂时不用</string>
+    <string name="update_now">立即更新</string>
+    <string name="update_install">安装</string>
+    <string name="update_progress">下载中</string>
+    <string name="update_progress_succeed">下载成功</string>
+    <string name="setting">设置</string>
+    <string name="permission_install">安装应用需要未知应用来源权限</string>
+
+    <!-- common -->
+    <string name="rmb">¥</string>
+    <string name="common_album">相册</string>
+
+    <string name="common_next">下一步</string>
+
+    <string name="hint_more_not">没有更多数据</string>
+
+    <!-- app -->
+    <string name="hint_auto_jump_error">设置失败,请手动开启权限</string>
+    <string name="tab_home">首页</string>
+    <string name="tab_extension">推广中心</string>
+    <string name="tab_model">银元交易</string>
+    <string name="tab_user">我的</string>
+
+    <!-- home -->
+    <string name="hint_search">搜索你想要的商品吧~</string>
+    <string name="hint_sales_count" formatted="false">销量%s笔</string>
+    <string name="hint_price" formatted="false">价格：</string>
+    <string name="hint_stock" formatted="false">库存：%s</string>
+    <string name="hint_token" formatted="false">银元：%s</string>
+
+    <string name="label_entrance_1">配套产品</string>
+    <string name="label_entrance_2">时尚女装</string>
+    <string name="label_entrance_3">手机数码</string>
+    <string name="label_entrance_4">运动户外</string>
+    <string name="label_entrance_5">鞋包配饰</string>
+    <string name="label_entrance_6">潮流男装</string>
+    <string name="label_entrance_7">居家百货</string>
+    <string name="label_entrance_8">口碑美食</string>
+    <string name="label_entrance_9">母婴用品</string>
+    <string name="label_entrance_10">美妆洗护</string>
+
+    <string name="label_recommend">推荐商品</string>
+    <string name="label_form">报单商品</string>
+    <string name="buy_count" formatted="false">%s人购买</string>
+    <string name="label_global">综合</string>
+    <string name="label_sales_volume">销量</string>
+    <string name="label_price">价格</string>
+
+    <string name="label_history">历史搜索</string>
+    <string name="label_commodity_details">商品详情</string>
+    <string name="label_number">规格数量选择</string>
+    <string name="label_photo">图文详情</string>
+    <string name="label_color">颜色</string>
+    <string name="label_size">尺码</string>
+    <string name="label_volume">数量</string>
+
+    <string name="label_commodity_order">确认订单</string>
+    <string name="label_address">新增地址</string>
+    <string name="label_specification" formatted="false">规格：%s</string>
+    <string name="hint_address">当前未设置收获地址</string>
+    <string name="tag_normal">默认</string>
+    <string name="label_delivery">配送方式</string>
+    <string name="label_commodity_price">商品金额</string>
+    <string name="label_freight">运费</string>
+    <string name="delivery_express">快递配送</string>
+    <string name="freight_free">免运费</string>
+    <string name="amount">合计：</string>
+
+    <string name="button_cart">加入购物车</string>
+    <string name="button_buy">立即购买</string>
+    <string name="button_payment">去付款</string>
+
+    <string name="label_pay">立即付款</string>
+    <string name="label_pay_method">选择支付方式</string>
+    <string name="label_alipay">支付宝</string>
+    <string name="label_wechat_pay">微信支付</string>
+    <string name="label_app_pay">银元支付</string>
+    <string name="label_app_pay_hint">(6月16-6月20,银元支付满100减10)</string>
+    <string name="label_app_pay_count" formatted="false">剩余银元%s个</string>
+    <string name="button_app_pay" formatted="false">确认支付%s银元</string>
+    <string name="button_sdk_pay" formatted="false">确认支付%s元</string>
+
+    <string name="hint_wx">请先安装微信</string>
+
+    <string name="pay_succeed">支付成功</string>
+    <string name="pay_failure">支付失败</string>
+
+    <string name="dialog_home">返回首页</string>
+    <string name="dialog_details">查看订单</string>
+
+    <string name="hint_not_search">请输入搜索内容</string>
+
+    <!-- extension -->
+    <string name="me_upgrade">引荐更多用户\n提升更高等级</string>
+    <string name="me_income">银元明细</string>
+    <string name="me_buyrole_title">购买角色</string>
+    <string name="me_buy_bd_title">购买报单</string>
+    <string name="me_my_interview_title">我的团队</string>
+    <string name="me_not_vip">您还不是会员\n购买报单产品可升级为会员\n享受更多福利～</string>
+    <string name="me_level_title">平级烧伤规则</string>
+    <string name="me_receivelingpai_title">领取银元</string>
+    <string name="me_receive_good">领取商品</string>
+    <string name="me_share">分享</string>
+
+    <string name="label_extension">推广中心</string>
+    <string name="label_detailed">收益明细</string>
+    <string name="label_upgrade_buy">购买升级</string>
+    <string name="label_upgrade_extension">推广升级</string>
+    <string name="label_declaration">购买报单</string>
+    <string name="label_invite">我的邀请</string>
+    <string name="label_reward_receive">奖励领取</string>
+    <string name="label_reward_rule">奖励规则</string>
+
+    <string name="hint_profit">推广获得收益</string>
+    <string name="hint_upgrade_buy">一键购买轻松升级</string>
+    <string name="hint_upgrade_extension">各项推广享受升级</string>
+    <string name="hint_declaration" formatted="false">能领取%s次银元奖励</string>
+    <string name="hint_invite" formatted="false">已成功邀请%s人</string>
+    <string name="hint_grade_max">你已经是最高等级</string>
+    <string name="hint_role">选择购买角色</string>
+    <string name="hint_payment">选择支付方式</string>
+
+    <string name="grade_screen">筛选：%s</string>
+    <string name="grade_lv_0">入门者</string>
+    <string name="grade_lv_1">爱好者</string>
+    <string name="grade_lv_2">志愿者</string>
+    <string name="grade_lv_3">青烟精英</string>
+    <string name="grade_lv_4">青烟大师</string>
+
+    <!-- model -->
+    <string name="title_model">C2C交易</string>
+
+    <string name="label_demand">发布需求</string>
+    <string name="label_message">我的消息</string>
+    <string name="label_voucher">交易订单</string>
+
+    <string name="tab_buy">我要买</string>
+    <string name="tab_sell">我要卖</string>
+    <string name="sort_price">价格高低</string>
+    <string name="sort_time">时间最近</string>
+
+    <string name="token">银元</string>
+    <string name="radio" formatted="false">成交率%s</string>
+    <string name="volume" formatted="false">成交量%s</string>
+    <string name="pay_method">交易方式</string>
+
+    <string name="label_token_number">银元数量</string>
+    <string name="hint_token_number_1">请填写卖出的银元数量</string>
+    <string name="hint_token_number_2">请填写购买的银元数量</string>
+    <string name="label_sale_price">卖出价格</string>
+    <string name="hint_sale_price">请填写卖出价格</string>
+    <string name="label_buy_price">购买价格</string>
+    <string name="hint_buy_price">请填写购买价格</string>
+    <string name="label_receiving_account">收款账号</string>
+    <string name="hint_receiving_account">(二填一或者都选)</string>
+    <string name="label_alipay_account">支付宝账号</string>
+    <string name="hint_alipay_account">请填写收款的支付宝账号</string>
+    <string name="label_wechat_account">微信账号</string>
+    <string name="hint_wechat_account">请填写收款的微信账号</string>
+
+    <string name="button_release_sale">发布售卖</string>
+    <string name="button_release_buy">发布购买</string>
+    <string name="hint_release_succeed">发布成功</string>
+
+    <string name="tab_buy_mine">我的购买</string>
+    <string name="tab_sell_mine">我的售卖</string>
+
+    <string name="status_all">全部</string>
+    <string name="status_wait_business">待交易</string>
+    <string name="status_wait_upload">待上传</string>
+    <string name="status_wait_sure">待确认</string>
+    <string name="status_end">已完成</string>
+
+    <string name="title_transaction_details">交易详情</string>
+    <string name="label_sell_info">卖方信息</string>
+    <string name="label_buy_info">买方信息</string>
+
+    <string name="label_transaction">交易</string>
+    <string name="voucher">凭证</string>
+    <string name="hint_token_number">购买银元数量</string>
+    <string name="hint_token_number_insufficient">银元不足</string>
+    <string name="hint_token_number_min">银元数量需大于0</string>
+
+    <string name="button_launch_sell">发起售卖</string>
+    <string name="button_launch_buy">发起购买</string>
+    <string name="button_voucher">上传凭证</string>
+    <string name="button_upload">确认上传</string>
+    <string name="button_cancel_business">取消交易</string>
+
+    <string name="hint_voucher">请上传支付宝或微信交易凭证</string>
+    <string name="hint_buy_info">您发起的购买信息\n已成功通知卖方\n请在两小时内上传凭证\n否则该交易自动取消</string>
+    <string name="hint_sell_info">您发起的售卖信息\n已成功通知买方\n请等待买方回复</string>
+
+    <string name="hint_wait_business">该订单暂未交易</string>
+    <string name="hint_cancel_succeed">取消成功</string>
+    <string name="hint_copy">已复制</string>
+
+    <!-- user login -->
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="password_forget">忘记密码</string>
+    <string name="mobile_bind">绑定手机</string>
+
+    <string name="hint_mobile">请输入11位手机号</string>
+    <string name="hint_password">请输入6-12位密码</string>
+    <string name="hint_pay_password">请输入交易密码</string>
+    <string name="hint_sms_code">请输入获取的验证码</string>
+    <string name="hint_invite_code">请输入邀请码</string>
+    <string name="hint_agreement_all">注册/登录代表您已阅读并同意《购物商城服务条款》</string>
+    <string name="hint_agreement">《购物商城服务条款》</string>
+
+    <string name="forget_password">忘记密码？</string>
+    <string name="register_now">立即注册</string>
+    <string name="sms_code">获取验证码</string>
+
+    <string name="surplus_time" formatted="false">剩余 %s s </string>
+
+    <string name="user_shop_cart">购物车</string>
+    <string name="user_collect">我的收藏</string>
+    <string name="user_address">地址管理</string>
+    <string name="user_add_address">添加地址</string>
+    <string name="user_order_detail">订单详情</string>
+    <string name="user_edit_info">编辑资料</string>
+    <string name="user_token">我的钱包</string>
+    <string name="user_receive_token">领取银元</string>
+    <string name="user_set_pay_account">收款账号</string>
+    <string name="user_set_modify_password">重置密码</string>
+    <string name="user_set_pay_password">设置支付密码</string>
+    <string name="user_setting">设置</string>
+    <string name="user_customer_service">我的客服</string>
+
+    <string name="label_token_available">可用银元数量</string>
+    <string name="label_token_total">总银元数量</string>
+    <string name="label_token_frozen">冻结银元数量</string>
+    <string name="label_token_detailed">银元明细</string>
+
+    <string name="label_see_all">查看全部</string>
 
 </resources>

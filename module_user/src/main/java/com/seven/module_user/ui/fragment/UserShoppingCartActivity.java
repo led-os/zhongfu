@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
-import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
@@ -25,8 +24,6 @@ import com.seven.lib_model.ApiManager;
 import com.seven.lib_model.BaseResult;
 import com.seven.lib_model.model.home.CartEntity;
 import com.seven.lib_model.model.user.mine.ShopEntity;
-import com.seven.lib_model.presenter.home.ActHomePresenter;
-import com.seven.lib_model.user.UserActivityPresenterNew;
 import com.seven.lib_opensource.event.MessageEvent;
 import com.seven.lib_opensource.event.ObjectsEvent;
 import com.seven.lib_router.Constants;
@@ -78,10 +75,6 @@ public class UserShoppingCartActivity extends BaseTitleActivity {
 
     private boolean isSelectAll = false;
     private boolean isManager = false;
-    int num = 0;
-
-    UserActivityPresenterNew presenterNew;
-    ActHomePresenter presenter;
 
     @Override
     public void showLoading() {
@@ -114,12 +107,6 @@ public class UserShoppingCartActivity extends BaseTitleActivity {
         setRightImg(R.drawable.shopping_cart_manager_icon);
 
         getData();
-
-        presenterNew = new UserActivityPresenterNew(this, this);
-    }
-
-    private void addOrder(int number,int cart_id){
-       presenterNew.addCar(1,number,cart_id);
     }
 
     @Override
@@ -132,7 +119,6 @@ public class UserShoppingCartActivity extends BaseTitleActivity {
         isManager = !isManager;
         payLayout.setVisibility(isManager ? View.GONE : View.VISIBLE);
         delete.setVisibility(isManager ? View.VISIBLE : View.GONE);
-        setRightImg(isManager ? R.drawable.shopping_car_done : R.drawable.shopping_cart_manager_icon);
     }
 
     @Override
@@ -177,12 +163,9 @@ public class UserShoppingCartActivity extends BaseTitleActivity {
                 helper.setText(R.id.goods_name, item.getGoods_name())
                         .setText(R.id.sales, item.getSales() + "人付款")
                         .setText(R.id.money, String.valueOf(item.getPrice()))
-                        .setText(R.id.number, item.getNumber() + "")
                         .addOnClickListener(R.id.is_select_btn)
-                        .addOnClickListener(R.id.add)
-                        .addOnClickListener(R.id.delete)
                         .setImageResource(R.id.is_select_btn,
-                                item.isSelect() ? R.drawable.item_shopping_cart_selector : R.drawable.item_shopping_cart_default);
+                                item.isSelect() ? R.drawable.check_on : R.drawable.check_off);
                 ImageView imageView = helper.getView(R.id.goods_img);
                 GlideUtils.loadImage(mContext, item.getThumb(), imageView);
             }
@@ -191,27 +174,10 @@ public class UserShoppingCartActivity extends BaseTitleActivity {
                     @Override
                     public void onSimpleItemChildClick(BaseQuickAdapter adapter, View view, int position) {
                         CartEntity entity = (CartEntity) adapter.getData().get(position);
-
                         if (view.getId() == R.id.is_select_btn) {
                             entity.setSelect(!entity.isSelect());
                             adapter.notifyItemChanged(position);
                             changeSelectNum();
-                        } else if (view.getId() == R.id.add) {
-                            num = entity.getNumber();
-                            num++;
-                            entity.setNumber(num);
-                            adapter.notifyItemChanged(position);
-                            changeSelectNum();
-                            addOrder(entity.getNumber(),entity.getId());
-                        } else if (view.getId() == R.id.delete) {
-                            num = entity.getNumber();
-                            num--;
-                            if (num > 0) {
-                                entity.setNumber(num);
-                            }
-                            adapter.notifyItemChanged(position);
-                            changeSelectNum();
-                            addOrder(entity.getNumber(),entity.getId());
                         }
                     }
                 })
@@ -245,24 +211,20 @@ public class UserShoppingCartActivity extends BaseTitleActivity {
             ToastUtils.showToast(mContext, "没有选择商品");
             return;
         }
-        List<CartEntity> cartList = new ArrayList<>();
-        CartEntity cartEntity = new CartEntity();
-        cartEntity.setFrom(Constants.InterfaceConfig.CART);
-        cartEntity.setCart_ids(shopIds.toString());
-        cartList.add(cartEntity);
-        ARouter.getInstance().build(RouterPath.ACTIVITY_COMMODITY_ORDER)
-                .withSerializable(Constants.BundleConfig.ENTITY, (Serializable) cartList)
-                .navigation();
+
+        EventBus.getDefault().post(new ObjectsEvent(code, shopIds.toString()));
+        onBackPressed();
+
     }
 
     @OnClick({R2.id.select_all_img, R2.id.select_all_tv})
     void selectAll() {
         isSelectAll = !isSelectAll;
         if (isSelectAll) {
-            select_all_img.setImageDrawable(getResources().getDrawable(R.drawable.item_shopping_cart_selector));
+            select_all_img.setImageDrawable(getResources().getDrawable(R.drawable.check_on));
             select_all_tv.setTextColor(getResources().getColor(R.color.add_address_default_c));
         } else {
-            select_all_img.setImageDrawable(getResources().getDrawable(R.drawable.item_shopping_cart_default));
+            select_all_img.setImageDrawable(getResources().getDrawable(R.drawable.check_off));
             select_all_tv.setTextColor(getResources().getColor(R.color.add_address_default_n));
         }
         changeListDataState(isSelectAll);
@@ -271,17 +233,11 @@ public class UserShoppingCartActivity extends BaseTitleActivity {
     @OnClick(R2.id.delete_select)
     void delete() {
         List<CartEntity> dataList = recyclerView.getAdapter().getData();
-        String ids = "";
         for (Iterator<CartEntity> it = dataList.iterator(); it.hasNext(); ) {
             CartEntity entity = it.next();
             if (entity.isSelect()) {
                 it.remove();
-                ids += entity.getId() + ",";
             }
-        }
-        if (!TextUtils.isEmpty(ids)) {
-            ids = ids.substring(0, ids.length() - 1);
-            presenterNew.deleteCar(1, ids);
         }
         recyclerView.notifyDataSetChanged();
     }
@@ -302,14 +258,11 @@ public class UserShoppingCartActivity extends BaseTitleActivity {
         for (CartEntity entity : entityList) {
             if (entity.isSelect()) {
                 num++;
-                money += entity.getPrice() * entity.getNumber();
+                money += entity.getPrice();
             }
         }
         select_num.setText("(" + num + ")");
-        if (money == 0.0f)
-            moneyTv.setText("总价：￥0.00");
-        else
-            moneyTv.setText("总价：￥" + new java.text.DecimalFormat("#.00").format(new Double(money)));
+        moneyTv.setText("总价：￥" + money);
     }
 
     private View getEmptyView() {

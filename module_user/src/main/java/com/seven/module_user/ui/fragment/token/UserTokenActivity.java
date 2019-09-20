@@ -13,6 +13,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.google.gson.Gson;
 import com.seven.lib_common.base.activity.BaseAppCompatActivity;
+import com.seven.lib_common.utils.ResourceUtils;
 import com.seven.lib_model.ApiManager;
 import com.seven.lib_model.BaseResult;
 import com.seven.lib_model.CommonObserver;
@@ -72,7 +73,7 @@ public class UserTokenActivity extends BaseAppCompatActivity {
 
     @Override
     protected void init(Bundle savedInstanceState) {
-        textView.setText("我的令牌");
+        textView.setText(ResourceUtils.getText(R.string.user_token));
     }
 
     @Override

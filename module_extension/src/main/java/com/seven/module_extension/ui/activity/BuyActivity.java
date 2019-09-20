@@ -126,7 +126,6 @@ public class BuyActivity extends BaseTitleActivity {
 
     @Override
     protected void initView(Bundle savedInstanceState) {
-        statusBar = StatusBar.LIGHT;
         EventBus.getDefault().register(this);
         setTitleText(R.string.me_buy_bd_title);
         presenter = new ExActivityPresenter(this, this);

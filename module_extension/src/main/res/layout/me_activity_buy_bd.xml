@@ -97,7 +97,7 @@
             android:layout_weight="1"
             android:gravity="center_vertical"
             android:text="总价: ￥0.00"
-            android:textColor="#136de8"
+            android:textColor="@color/primary"
             android:textSize="14sp"
             app:SFontStyle="regular_s" />
 
@@ -105,7 +105,7 @@
             android:id="@+id/me_buy_bd_btn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:background="@drawable/me_buy_bd_gobuybg"
+            android:background="@drawable/button_rect"
             android:gravity="center"
             android:paddingLeft="33dp"
             android:paddingRight="33dp"

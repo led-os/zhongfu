@@ -73,6 +73,8 @@ public class CommodityDetailsActivity extends BaseTitleActivity implements BaseQ
     public TypeFaceView countTv;
     @BindView(R2.id.collection_rl)
     public RelativeLayout collectionRl;
+    @BindView(R2.id.shopping_add_rl)
+    public RelativeLayout shoppingAddRl;
 
     private Banner banner;
     private TypeFaceView tokenTv;
@@ -173,6 +175,8 @@ public class CommodityDetailsActivity extends BaseTitleActivity implements BaseQ
     }
 
     private void setHeaderView(CommodityDetailsEntity entity) {
+
+        shoppingAddRl.setVisibility(entity.getIs_form_goods() == 1 ? View.INVISIBLE : View.VISIBLE);
 
         banner.setImages(entity.getPictures())
                 .setImageLoader(new GlideImageLoader())

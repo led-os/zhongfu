@@ -14,8 +14,8 @@ import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.flyco.tablayout.SlidingTabLayout;
-import com.gyf.barlibrary.ImmersionBar;
 import com.seven.lib_common.base.activity.BaseAppCompatActivity;
+import com.seven.lib_common.utils.ResourceUtils;
 import com.seven.lib_router.router.RouterPath;
 import com.seven.module_user.R;
 import com.seven.module_user.R2;
@@ -62,7 +62,6 @@ public class UserTokenListActivity extends BaseAppCompatActivity {
 
     @Override
     protected int getContentViewId() {
-        statusBar = StatusBar.LIGHT;
         return R.layout.mu_activity_token_list_layout;
     }
 
@@ -73,7 +72,7 @@ public class UserTokenListActivity extends BaseAppCompatActivity {
 
     @Override
     protected void initBundleData(Intent intent) {
-        titleTv.setText("令牌明细");
+        titleTv.setText(ResourceUtils.getText(R.string.label_token_detailed));
         for (String type : mType) {
             mFragments.add(TokenListFragment.getInstance(type));
         }

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- predefine ID -->
+    <item name="pre_tv_title" type="id" />
+    <item name="pre_v_left" type="id" />
+    <item name="pre_v_left_iv" type="id" />
+    <item name="pre_v_right" type="id" />
+    <item name="pre_v_right_iv" type="id" />
+    <item name="pre_tv_right" type="id" />
+    <item name="pre_tv_right_tv" type="id" />
+    <item name="pre_layout" type="id" />
+
+    <!-- status bar -->
+    <item type="id" name="statusbarutil_fake_status_bar_view" />
+    <item type="id" name="statusbarutil_translucent_view" />
+
+    <!--color-->
+    <item name="colorPrimary" type="color" />
+    <item name="colorAccent" type="color" />
+    <item name="background" type="color" />
+
+    <!--string-->
+    <item name="year_ago" type="string" />
+    <item name="month_ago" type="string" />
+    <item name="day_ago" type="string" />
+    <item name="hour_ago" type="string" />
+    <item name="minute_ago" type="string" />
+    <item name="year_ago_s" type="string" />
+    <item name="month_ago_s" type="string" />
+    <item name="day_ago_s" type="string" />
+    <item name="hour_ago_s" type="string" />
+    <item name="minute_ago_s" type="string" />
+    <item name="just_now" type="string" />
+
+    <!-- expand -->
+    <item name="expandable_text" type="id" />
+    <item name="expand_collapse" type="id" />
+
+    <!-- toolbar -->
+    <item name="recommend_tv" type="id" />
+
+</resources>

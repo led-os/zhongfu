@@ -12,6 +12,7 @@ import com.seven.lib_common.utils.ImageUtils;
 import com.seven.lib_common.utils.ResourceUtils;
 import com.seven.lib_common.utils.ScreenUtils;
 import com.seven.lib_model.model.home.CommodityDetailsEntity;
+import com.seven.lib_router.Constants;
 import com.seven.lib_router.Variable;
 import com.seven.module_home.R;
 import com.tencent.mm.opensdk.modelmsg.SendMessageToWX;
@@ -122,7 +123,7 @@ public class ShareSheet extends IBaseSheet {
                 try {
                     thumbBmp = Glide.with(activity)
                             .asBitmap()
-                            .load(entity.getPictures().get(0)+ ScreenUtils.getImageSize(450, 450))
+                            .load(entity.getPictures().get(0) + ScreenUtils.getImageSize(450, 450))
                             .submit(150, 150)
                             .get();
 
@@ -150,9 +151,8 @@ public class ShareSheet extends IBaseSheet {
     }
 
     private String getUrl(int userId, int producationId) {
-        String url = "http://mobile.zf.fqwlkj.com.cn/goods_info.html";
         String uid = "?uid=" + userId;
         String product_id = "&product_id=" + producationId;
-        return url + uid + product_id;
+        return "http://www.qingyan.vrplay2018.com/goods_info.html" + uid + product_id;
     }
 }

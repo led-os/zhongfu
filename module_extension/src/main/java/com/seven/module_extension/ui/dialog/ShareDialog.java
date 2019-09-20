@@ -13,6 +13,7 @@ import com.seven.lib_common.utils.ImageUtils;
 import com.seven.lib_common.utils.ResourceUtils;
 import com.seven.lib_common.utils.ScreenUtils;
 import com.seven.lib_model.model.user.UserEntity;
+import com.seven.lib_router.Constants;
 import com.seven.lib_router.Variable;
 import com.seven.lib_router.db.shard.SharedData;
 import com.seven.module_extension.R;
@@ -35,7 +36,7 @@ public class ShareDialog extends IBaseSheet {
     SendMessageToWX.Req req;
 
     UserEntity userEntity;
-    private int userId=0;
+    private int userId = 0;
 
     public ShareDialog(Activity activity, int theme, com.seven.lib_common.listener.OnClickListener listener) {
         super(activity, theme, listener);
@@ -65,8 +66,8 @@ public class ShareDialog extends IBaseSheet {
 
     @Override
     public void initData() {
-        userEntity = new Gson().fromJson(SharedData.getInstance().getUserInfo(),UserEntity.class);
-        if (userEntity != null){
+        userEntity = new Gson().fromJson(SharedData.getInstance().getUserInfo(), UserEntity.class);
+        if (userEntity != null) {
             userId = userEntity.getId();
         }
     }
@@ -140,8 +141,7 @@ public class ShareDialog extends IBaseSheet {
     }
 
     private String getUrl(int userId) {
-        String url = "http://mobile.zf.fqwlkj.com.cn/invite.html";
         String uid = "?uid=" + userId;
-        return url + uid;
+        return "http://www.qingyan.vrplay2018.com/invite.html" + uid;
     }
 }

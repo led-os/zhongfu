@@ -24,8 +24,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right|end"
-            android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:layout_marginRight="@dimen/margin_16"
             android:visibility="visible" />
 
     </com.seven.module_user.ui.fragment.view.CustomToolbar>

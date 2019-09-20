@@ -18,7 +18,6 @@
             android:paddingLeft="@dimen/padding_16"
             android:paddingRight="@dimen/padding_16">
 
-
             <RelativeLayout
                 android:id="@+id/user_info_layout"
                 android:layout_width="match_parent"
@@ -225,6 +224,17 @@
                 </RelativeLayout>
             </LinearLayout>
 
+            <ImageView
+                android:id="@+id/activity_iv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="@dimen/margin_16"
+                android:layout_marginRight="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_8"
+                android:src="@drawable/activity2019618_1"
+                android:visibility="gone"/>
 
             <TextView
 
@@ -241,7 +251,7 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
                 android:paddingTop="8dp"
-                android:text="我的令牌"
+                android:text="@string/user_token"
                 android:textColor="@color/account_text_color" />
 
             <TextView
@@ -343,6 +353,23 @@
                     android:src="@drawable/more"/>
 
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/user_customer_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/selector_white_btn"
+                android:drawableLeft="@drawable/customer_service"
+                android:drawablePadding="8dp"
+                android:drawableRight="@drawable/more"
+                android:gravity="center_vertical"
+                android:paddingBottom="8dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:text="@string/user_customer_service"
+                android:textColor="@color/account_text_color" />
 
             <TextView
                 android:id="@+id/my_clear_cache"

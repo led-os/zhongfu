@@ -74,6 +74,8 @@ public class UserFragment extends BaseFragment {
     LinearLayout messageLayout;
     UserPresenter presenter;
     UserEntity userEntity;
+    @BindView(R2.id.activity_iv)
+    ImageView activityIv;
 
     @Override
     public int getContentViewId() {

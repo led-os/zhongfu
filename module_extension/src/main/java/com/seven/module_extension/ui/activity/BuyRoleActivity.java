@@ -14,6 +14,7 @@ import com.google.gson.Gson;
 import com.seven.lib_common.base.activity.BaseTitleActivity;
 import com.seven.lib_common.listener.OnClickListener;
 import com.seven.lib_common.ui.dialog.MallDialog;
+import com.seven.lib_common.utils.ResourceUtils;
 import com.seven.lib_common.utils.ToastUtils;
 import com.seven.lib_common.utils.pay.PayUtils;
 import com.seven.lib_model.ApiManager;
@@ -83,7 +84,6 @@ public class BuyRoleActivity extends BaseTitleActivity {
 
     @Override
     protected void initView(Bundle savedInstanceState) {
-        statusBar = StatusBar.LIGHT;
         setTitleText(R.string.me_buyrole_title);
         EventBus.getDefault().register(this);
         presenter = new ExActivityPresenter(this, this);
@@ -100,9 +100,9 @@ public class BuyRoleActivity extends BaseTitleActivity {
 
                     @Override
                     public void onNext(BaseResult<BuyRoleEntity> buyRoleEntityBaseResult) {
-                        meKzPrice.setText("￥" + buyRoleEntityBaseResult.getData().getRole_2());
-                        meCzPrice.setText("￥" + buyRoleEntityBaseResult.getData().getRole_3());
-                        meChengzPrice.setText("￥" + buyRoleEntityBaseResult.getData().getRole_4());
+                        meKzPrice.setText(ResourceUtils.getText(R.string.rmb) + buyRoleEntityBaseResult.getData().getRole_2());
+                        meCzPrice.setText(ResourceUtils.getText(R.string.rmb)+ buyRoleEntityBaseResult.getData().getRole_3());
+                        meChengzPrice.setText(ResourceUtils.getText(R.string.rmb) + buyRoleEntityBaseResult.getData().getRole_4());
                     }
 
                     @Override
@@ -193,11 +193,11 @@ public class BuyRoleActivity extends BaseTitleActivity {
 //                return;
 //            }
             if (role.isEmpty()) {
-                ToastUtils.showToast(mContext, "请选择购买角色");
+                ToastUtils.showToast(mContext, ResourceUtils.getText(R.string.hint_role));
                 return;
             }
             if (pay.isEmpty()) {
-                ToastUtils.showToast(mContext, "请选择支付方式");
+                ToastUtils.showToast(mContext, ResourceUtils.getText(R.string.hint_payment));
                 return;
             }
             if (!isLogin()) return;
@@ -223,8 +223,8 @@ public class BuyRoleActivity extends BaseTitleActivity {
         }
     }
 
-    private void resultDialog(int type){
-        if (dialog == null){
+    private void resultDialog(int type) {
+        if (dialog == null) {
             dialog = new MallDialog(this, R.style.Dialog, new OnClickListener() {
                 @Override
                 public void onCancel(View v, Object... objects) {
@@ -240,7 +240,7 @@ public class BuyRoleActivity extends BaseTitleActivity {
                 public void dismiss() {
 
                 }
-            },type);
+            }, type);
             dialog.setCancelable(false);
         }
 

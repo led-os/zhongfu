@@ -9,8 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/me_dialog_notvip"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="@dimen/padding_32"
+        android:layout_marginRight="@dimen/padding_32"
         android:orientation="vertical">
 
         <LinearLayout
@@ -82,7 +82,7 @@
                 android:paddingBottom="18dp"
                 android:textSize="14sp"
                 android:text="立刻购买"
-                android:textColor="#177feb" />
+                android:textColor="@color/primary" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

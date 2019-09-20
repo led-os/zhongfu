@@ -4,11 +4,11 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib_opensource/lib_opensource.iml" filepath="$PROJECT_DIR$/lib_opensource/lib_opensource.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mall.iml" filepath="$PROJECT_DIR$/mall.iml" />
       <module fileurl="file://$PROJECT_DIR$/module_extension/module_extension.iml" filepath="$PROJECT_DIR$/module_extension/module_extension.iml" />
       <module fileurl="file://$PROJECT_DIR$/module_home/module_home.iml" filepath="$PROJECT_DIR$/module_home/module_home.iml" />
       <module fileurl="file://$PROJECT_DIR$/module_model/module_model.iml" filepath="$PROJECT_DIR$/module_model/module_model.iml" />
       <module fileurl="file://$PROJECT_DIR$/module_user/module_user.iml" filepath="$PROJECT_DIR$/module_user/module_user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zhongfu.iml" filepath="$PROJECT_DIR$/zhongfu.iml" />
     </modules>
   </component>
 </project>

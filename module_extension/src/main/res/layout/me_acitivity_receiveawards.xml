@@ -37,7 +37,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="12dp"
-                android:button="@drawable/me_unselect"
+                android:button="@drawable/check_off"
                 android:text="全选"
                 android:textColor="#757575" />
 

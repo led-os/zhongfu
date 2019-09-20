@@ -27,7 +27,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:src="@drawable/order_address_icon" />
+                    android:src="@drawable/location" />
 
                 <TextView
                     android:id="@+id/name_and_phone"
@@ -141,7 +141,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/order_ll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_8"

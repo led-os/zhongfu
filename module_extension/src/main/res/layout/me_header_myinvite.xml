@@ -20,7 +20,6 @@
             android:background="@drawable/me_item_interview_type_bg" />
 
         <com.seven.lib_common.stextview.TypeFaceView
-            android:id="@+id/me_headr_interview_my_leader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -97,7 +96,6 @@
             android:background="@drawable/me_item_interview_type_bg" />
 
         <com.seven.lib_common.stextview.TypeFaceView
-            android:id="@+id/me_headr_interview_mazai"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"

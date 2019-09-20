@@ -40,7 +40,7 @@
         android:layout_marginRight="12dp"
         android:layout_alignTop="@+id/me_item_buybd_name"
         android:button="@null"
-        android:background="@drawable/me_unselect"/>
+        android:background="@drawable/check_off"/>
 
     <TextView
         android:id="@+id/me_item_buybd_price"

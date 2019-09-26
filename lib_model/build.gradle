@@ -1,0 +1,45 @@
+apply plugin: 'com.android.library'
+
+android {
+    def globalConfig = rootProject.ext.android
+    compileSdkVersion globalConfig.compileSdkVersion as int
+
+    defaultConfig {
+        minSdkVersion globalConfig.minSdkVersion as int
+        targetSdkVersion globalConfig.targetSdkVersion as int
+        versionCode globalConfig.versionCode as int
+        versionName globalConfig.versionName as String
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+                includeCompileClasspath = true
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+repositories {
+    flatDir {
+        dirs 'libs', project(':lib_opensource').file('libs')
+    }
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    annotationProcessor "com.alibaba:arouter-compiler:${rootProject.ext.arouter.compiler}"
+    implementation project(':lib_http')
+    implementation project(':lib_common')
+    implementation project(':lib_opensource')
+}

@@ -9,7 +9,11 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/lib_common" />
+            <option value="$PROJECT_DIR$/lib_http" />
+            <option value="$PROJECT_DIR$/lib_model" />
             <option value="$PROJECT_DIR$/lib_opensource" />
+            <option value="$PROJECT_DIR$/lib_router" />
             <option value="$PROJECT_DIR$/module_extension" />
             <option value="$PROJECT_DIR$/module_home" />
             <option value="$PROJECT_DIR$/module_model" />

@@ -1,0 +1,26 @@
+package com.seven.lib_model.model.user;
+
+/**
+ * Created by xxxxxxH on 2019/4/21.
+ */
+
+public class LoginEntity {
+    private String phone;
+    private String password;
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+}

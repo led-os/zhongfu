@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_background"
+        android:minHeight="180dp"
+        android:orientation="vertical">
+
+        <com.seven.lib_common.stextview.TypeFaceView
+            android:id="@+id/hint_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_16"
+            android:text="@string/dialog_hint"
+            android:textColor="@color/cube"
+            android:textSize="@dimen/sp_18"
+            app:SFontStyle="medium_s" />
+
+        <com.seven.lib_common.stextview.TypeFaceView
+            android:id="@+id/content_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_16"
+            android:layout_marginRight="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_16"
+            android:textColor="@color/grey_medium"
+            android:textSize="@dimen/sp_14"
+            app:SFontStyle="regular_s"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="@dimen/margin_32">
+
+            <RelativeLayout
+                android:id="@+id/cancel_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="@dimen/padding_12"
+                android:paddingRight="@dimen/padding_16"
+                android:paddingTop="@dimen/padding_12"
+                android:paddingBottom="@dimen/padding_12"
+                android:background="@drawable/btn_white_click">
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dialog_cancel"
+                    android:textColor="@color/grey_light"
+                    android:textSize="@dimen/sp_14"
+                    app:SFontStyle="regular_s" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sure_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/cancel_rl"
+                android:paddingLeft="@dimen/padding_16"
+                android:paddingRight="@dimen/padding_12"
+                android:paddingTop="@dimen/padding_12"
+                android:paddingBottom="@dimen/padding_12"
+                android:background="@drawable/btn_white_click">
+
+                <com.seven.lib_common.stextview.TypeFaceView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dialog_sure"
+                    android:textColor="@color/primary"
+                    android:textSize="@dimen/sp_14"
+                    app:SFontStyle="regular_s" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

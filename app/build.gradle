@@ -92,6 +92,9 @@ dependencies {
     compile 'cn.jiguang.sdk:jcore:1.1.9'
 
     implementation project(':lib_opensource')
+    implementation project(':lib_common')
+    implementation project(':lib_router')
+    implementation project(':lib_model')
     implementation project(':module_extension')
     implementation project(':module_home')
     implementation project(':module_model')

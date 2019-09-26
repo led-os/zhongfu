@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/toast"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp">
+
+    <com.seven.lib_common.stextview.TypeFaceView
+        android:id="@+id/message_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:SFontStyle="light_s"/>
+    <!--<com.sinostage.sevenlibrary.widget.typeface.TypeFaceView-->
+        <!--android:id="@+id/message_tv"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--android:gravity="center"-->
+        <!--android:textColor="#ffffff"-->
+        <!--android:textSize="14sp"-->
+        <!--app:fontStyle="ubuntuL"/>-->
+</LinearLayout>

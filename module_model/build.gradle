@@ -48,8 +48,7 @@ dependencies {
     annotationProcessor "com.alibaba:arouter-compiler:${rootProject.ext.arouter.compiler}"
     implementation "com.jakewharton:butterknife:${rootProject.ext.butterknife.version}"
     implementation "com.jakewharton:butterknife-compiler:${rootProject.ext.butterknife.compiler}"
-//    if (theme.toInteger() == 1)
-//        implementation project(':source_zhongfu')
-//    else if(theme.toInteger()==2)
-//        implementation project(':source_qingyan')
+    implementation project(':lib_common')
+    implementation project(':lib_router')
+    implementation project(':lib_model')
 }

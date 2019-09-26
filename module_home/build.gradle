@@ -51,8 +51,7 @@ dependencies {
     implementation "com.jakewharton:butterknife-compiler:${rootProject.ext.butterknife.compiler}"
     implementation "com.github.bumptech.glide:glide:${rootProject.ext.glide.version}"
     annotationProcessor "com.github.bumptech.glide:compiler:${rootProject.ext.glide.compiler}"
-//    if (theme.toInteger() == 1)
-//        implementation project(':source_zhongfu')
-//    else if(theme.toInteger()==2)
-//        implementation project(':source_qingyan')
+    implementation project(':lib_common')
+    implementation project(':lib_router')
+    implementation project(':lib_model')
 }

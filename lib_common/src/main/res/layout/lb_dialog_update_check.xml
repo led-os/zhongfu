@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/item_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/margin_24"
+            android:layout_marginRight="@dimen/margin_24"
+            android:background="@drawable/dialog_bg">
+
+            <ImageView
+                android:id="@+id/logo_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_32"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:id="@+id/update_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logo_iv">
+
+                <RelativeLayout
+                    android:id="@+id/update_check_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.seven.lib_common.stextview.TypeFaceView
+                        android:id="@+id/version_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/margin_12"
+                        android:layout_marginTop="@dimen/margin_12"
+                        android:textColor="@color/cube"
+                        android:textSize="@dimen/sp_16"
+                        app:SFontStyle="medium_s" />
+
+                    <com.seven.lib_common.stextview.TypeFaceView
+                        android:id="@+id/content_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/version_tv"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:layout_marginRight="@dimen/margin_20"
+                        android:textColor="@color/grey_medium"
+                        android:textSize="@dimen/sp_12"
+                        app:SFontStyle="regular_s" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/update_upload_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/margin_20"
+                        android:layout_marginLeft="44dp"
+                        android:layout_marginRight="44dp"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/update_progress"
+                        android:secondaryProgress="100" />
+
+                    <com.seven.lib_common.stextview.TypeFaceView
+                        android:id="@+id/progress_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/progress_bar"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/grey_medium"
+                        android:textSize="@dimen/sp_12"
+                        app:SFontStyle="regular_s" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_below="@+id/update_rl"
+                android:layout_marginBottom="@dimen/margin_32"
+                android:layout_marginTop="@dimen/margin_24"
+                android:orientation="horizontal"
+                android:paddingLeft="44dp"
+                android:paddingRight="44dp">
+
+                <RelativeLayout
+                    android:id="@+id/cancel_rl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_profile">
+
+                    <com.seven.lib_common.stextview.TypeFaceView
+                        android:id="@+id/cancel_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/update_later"
+                        android:textColor="@color/grey_medium"
+                        android:textSize="@dimen/sp_12"
+                        app:SFontStyle="medium_s" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/sure_rl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_primary_focused_selector">
+
+                    <com.seven.lib_common.stextview.TypeFaceView
+                        android:id="@+id/sure_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/update_now"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_12"
+                        app:SFontStyle="medium_s" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true">
+
+            <include layout="@layout/lb_snack_bar" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

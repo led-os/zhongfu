@@ -92,8 +92,4 @@ dependencies {
     compile(name: 'alipaySdk-15.5.9-20181123210601', ext: 'aar')
     compile(name: 'banner_2.0', ext: 'aar')
 
-    compile(name: 'lc', ext: 'aar')
-    compile(name: 'lm', ext: 'aar')
-    compile(name: 'lh', ext: 'aar')
-    compile(name: 'lr', ext: 'aar')
 }

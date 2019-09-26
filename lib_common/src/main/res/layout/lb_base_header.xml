@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/pre_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar">
+
+        <RelativeLayout
+            android:id="@+id/pre_v_left"
+            android:layout_width="@dimen/toolbar"
+            android:layout_height="match_parent"
+            android:onClick="btClick">
+
+            <ImageView
+                android:id="@+id/pre_v_left_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/back_black" />
+
+        </RelativeLayout>
+
+        <com.seven.lib_common.stextview.TypeFaceView
+            android:id="@+id/pre_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/pre_v_left"
+            android:layout_centerVertical="true"
+            android:textColor="@color/cube"
+            android:textSize="@dimen/sp_18"
+            app:SFontStyle="bold_s"
+            android:layout_marginLeft="@dimen/margin_12"/>
+
+        <RelativeLayout
+            android:id="@+id/pre_v_right"
+            android:layout_width="@dimen/toolbar"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:onClick="btClick">
+
+            <ImageView
+                android:id="@+id/pre_v_right_iv"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back_black" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/pre_tv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="right|top"
+            android:onClick="btClick"
+            android:paddingLeft="@dimen/padding_32"
+            android:paddingRight="@dimen/margin_16">
+
+            <com.seven.lib_common.stextview.TypeFaceView
+                android:id="@+id/pre_tv_right_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14"
+                app:SFontStyle="medium_s" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

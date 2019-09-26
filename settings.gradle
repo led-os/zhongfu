@@ -1,1 +1,1 @@
-include ':app', ':lib_opensource', ':module_home', ':module_user', ':module_extension', ':module_model'
+include ':app', ':lib_opensource', ':module_home', ':module_user', ':module_extension', ':module_model', ':lib_http', ':lib_router', ':lib_common', ':lib_model'

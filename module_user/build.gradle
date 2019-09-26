@@ -54,8 +54,7 @@ dependencies {
     implementation 'com.contrarywind:Android-PickerView:4.1.7'
     implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.3@aar'
     implementation 'com.jph.takephoto:takephoto_library:4.0.3'
-//    if (theme.toInteger() == 1)
-//        implementation project(':source_zhongfu')
-//    else if(theme.toInteger()==2)
-//        implementation project(':source_qingyan')
+    implementation project(':lib_common')
+    implementation project(':lib_router')
+    implementation project(':lib_model')
 }

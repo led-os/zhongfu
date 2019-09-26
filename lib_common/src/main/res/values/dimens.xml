@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="gallery_mini">100dp</dimen>
+
+    <dimen name="toolbar">48dp</dimen>
+    <dimen name="toolbar_shade">54dp</dimen>
+    <dimen name="toolbar_second">45dp</dimen>
+
+    <dimen name="item_height">49dp</dimen>
+    <dimen name="button">44dp</dimen>
+    <dimen name="edit">48dp</dimen>
+    <dimen name="common_height">49dp</dimen>
+    <dimen name="search_edit">30dp</dimen>
+
+    <dimen name="sp_10">10sp</dimen>
+    <dimen name="sp_12">12sp</dimen>
+    <dimen name="sp_14">14sp</dimen>
+    <dimen name="sp_16">16sp</dimen>
+    <dimen name="sp_18">18sp</dimen>
+    <dimen name="sp_24">24sp</dimen>
+    <dimen name="sp_28">28sp</dimen>
+
+    <dimen name="margin_4">4dp</dimen>
+    <dimen name="margin_6">6dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_12">12dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_24">24dp</dimen>
+    <dimen name="margin_32">32dp</dimen>
+    <dimen name="margin_40">40dp</dimen>
+    <dimen name="margin_70">70dp</dimen>
+    <dimen name="margin_100">100dp</dimen>
+    <dimen name="margin_120">120dp</dimen>
+    <dimen name="margin_200">200dp</dimen>
+
+    <dimen name="padding_4">4dp</dimen>
+    <dimen name="padding_6">6dp</dimen>
+    <dimen name="padding_8">8dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="padding_12">12dp</dimen>
+    <dimen name="padding_16">16dp</dimen>
+    <dimen name="padding_20">20dp</dimen>
+    <dimen name="padding_24">24dp</dimen>
+    <dimen name="padding_32">32dp</dimen>
+
+    <!-- video editor -->
+    <dimen name="album_dir_height">100dp</dimen>
+    <dimen name="album_dir_size">60dp</dimen>
+    <dimen name="edit_bottom">140dp</dimen>
+    <dimen name="edit_item">55dp</dimen>
+    <dimen name="release_item">65dp</dimen>
+
+    <!-- module common -->
+    <dimen name="select_item_height">64dp</dimen>
+
+    <!-- module home -->
+    <dimen name="order_address_h">70dp</dimen>
+    <dimen name="order_commodity_h">100dp</dimen>
+    <dimen name="pay_item">52dp</dimen>
+
+    <!-- module model -->
+    <dimen name="item_1_h">100dp</dimen>
+    <dimen name="item_2_h">50dp</dimen>
+    <dimen name="order_item">150dp</dimen>
+    <dimen name="avatar">60dp</dimen>
+    <dimen name="demand_item">44dp</dimen>
+    <dimen name="message_item">64dp</dimen>
+    <dimen name="transaction_item_1">80dp</dimen>
+    <dimen name="transaction_item_2">40dp</dimen>
+    <dimen name="transaction_item_3">64dp</dimen>
+    <dimen name="sheet_password">120dp</dimen>
+    <dimen name="sheet_password_r">40dp</dimen>
+
+</resources>
